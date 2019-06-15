@@ -1,0 +1,21 @@
+    .background-home{
+        background: rgba(105, 28, 72, 1);
+        height: 500px;
+    }
+
+    .background-img{
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url("santo_alexandre.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+
+    .text-color{
+        color: white;
+        font-family: Georgia;
+    }
+
+    .nav-ajust{
+        list-style: none;
+        display: inline-flex;
+    }
