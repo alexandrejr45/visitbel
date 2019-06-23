@@ -1,21 +1,61 @@
-    .background-home{
-        background: rgba(105, 28, 72, 1);
-        height: 500px;
+@media (min-width: 1200px){
+.container {
+    max-width: 960px;
+    width: auto !important;
     }
+}
 
-    .background-img{
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url("santo_alexandre.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 500px;
-    }
+.background-home{
+    background: rgba(105, 28, 72, 1);
+    height: 500px;
+}
+.background-conteudo{
+    background: linear-gradient(225deg, rgba(105, 28, 72, 0.5), rgba(105, 28, 72, 0.7))
+    , url("../page_estatica/1ls5635289245409295322.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: auto;
+    max-height:auto;
+    height: 500px;
+}
+.line-border{
+    border-top: 2px solid #fff;
 
-    .text-color{
-        color: white;
-        font-family: Georgia;
-    }
+}
+.ajust-text-conteudo{
+    font-weight: bold;
+    font-style: italic;
+}
 
-    .nav-ajust{
-        list-style: none;
-        display: inline-flex;
-    }
+.background-img{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url("santo_alexandre.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.text-color{
+    color: white;
+    font-family: Georgia;
+}
+
+.nav-ajust{
+    list-style: none;
+    display: inline-flex;
+}
+
+.background-footer{
+    background: rgba(105, 28, 72, 1);
+    height: 500px;
+}
+
+.ajuste-tela, .row{
+    margin-right: 0 !important;
+}
+
+.ajust-title-conteudo{
+    color: #707070;
+    letter-spacing: 4px;
+    border-spacing: 2px
+}
