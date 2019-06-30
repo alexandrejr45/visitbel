@@ -5,6 +5,7 @@
     }
 }
 
+
 .background-home{
     background: rgba(105, 28, 72, 1);
     height: 500px;
@@ -29,10 +30,12 @@
 }
 
 .background-img{
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url("santo_alexandre.jpg");
+    background-image: linear-gradient(rgba(105, 28, 72, 0.7), rgba(105, 28, 72, 0.6)), url("forte.jpg");
     background-size: cover;
+    background-position: center;
+    position: relative;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 660px;
 }
 
 .text-color{
@@ -58,4 +61,56 @@
     color: #707070;
     letter-spacing: 4px;
     border-spacing: 2px
+}
+
+.line-border{
+
+    transform: rotate(34deg);
+    border: 1px solid;
+}
+
+.line-border-title{
+    border-top: 2px solid #fff;
+}
+
+.color-input{
+    color: white
+}
+
+.nav-inferior{
+    display: none;
+}
+@media (max-width:720px){
+  
+    .scroll{
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 5;
+        height: 3.75rem;
+        border-top: 1px solid rgb(240, 240, 242);
+        background: rgb(255, 255, 255);
+        white-space: nowrap; 
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        -ms-overflow-style: -ms-autohiding-scrollbar;}
+   
+    .nav-inferior{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    }
+  
+        .scroll::-webkit-scrollbar {
+        display: none; }
+        .nav-item{
+            padding: 13px 16px 12px;
+            font-size: 14px;
+            padding: 13px 16px 12px;
+        }
+
+    }
+  
 }

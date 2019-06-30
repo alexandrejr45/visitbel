@@ -2,53 +2,56 @@
 <html lang="pt-BR">
 
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
-    <link href="../page_estatica/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
     <link href="../page_estatica/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="row ajuste-tela">
-        <div class="col-lg-6">
+    <!-- <div class="row ajuste-tela">
+          <div class="col-6">
             <div class="background-home">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-1">
-                            <img src="map.png" style="margin-top: 0.5em;" width="50" height="50" alt="" />
+                        <div class="col-1">
+                            <a href="../page_estatica/index.html">
+                                <img src="map.png" style="margin-top: 0.5em;" width="50" height="50" alt="" />
+                            </a>
                         </div>
-                        <div class="col-md-3">
+
+                        <div class="col-3">
                             <h4 class="text-color col-md-12" style="margin-top: 1em">VisitBell</h3>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-12" style="margin-top:5em;margin-left: 3em">
+                        <div class="col-12" style="margin-top:5em;margin-left: 3em">
                             <h2 class="text-color">Um jeito mais fácil de desbravar</br> os patrimônios históricos</h4>
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
-        <div class="col-lg-6" style="right:32px">
+    </div>-->
 
-            <div class="background-img" style="width: 41em;">
-                <div class="row">
-                    <ul class="nav-ajust text-color">
+    <div class="background-img">
+        <div class="background-content"></div>
+        <div class="row">
+            <ul class=" col-8 nav-ajust text-color">
 
-                        <li class="col-lg-2">Home</li>
-                        <li class="col-lg-2">Sobre</li>
-                        <li class="col-lg-5">Locais Históricos</li>
-                        <li class="col-lg-2">Contato</li>
-                    </ul>
-                </div>
-            </div>
+                <li class="col-2">Home</li>
+                <li class="col-2">Sobre</li>
+                <li class="col-5">Locais Históricos</li>
+                <li class="col-2">Contato</li>
+            </ul>
         </div>
     </div>
     <div style="margin:5em"></div>
     <section class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-1" style="margin-top:2em">
+            <div class="col-md-7 offset-md-1" style="margin-top:2em">
                 <h4>O Centro Histórico na Palma da Sua Mão</h4>
                 <p class="col-md-10" style="margin-top: 2em">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit. Proin mollis felis
@@ -65,7 +68,38 @@
     <div style="margin:10em"></div>
 
     <section class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 style="text-align: center">Conheça nossos patrimônios</h4>
+            </div>
+            <div class="col-12" style="margin-top:1em">
+                <p>Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Proin mollis felis
+                    risus,
+                    non vehicula tellus aliquet et. Nam id
+                    elementum purus. Vivamus ac lobortis massa, et fermentum nisl.
+                    Vestibulum et ante a mi molestie feugiat:</p>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-3 offset-lg-2">
+                <img src="../page_estatica/flat1.png" width="120" height="120" alt="" />
+                <div class=" col-3 offset-lg-5"></div>
+            </div>
+
+            <div class="col-3">
+                <img src="../page_estatica/flat2.png" width="120" height="120" alt="" />
+                <div class="col-3 offset-lg-5"></div>
+
+            </div>
+
+            <div class="col-3">
+                <img src="../page_estatica/flat3.png" width="120" height="120" alt="" />
+                <div class="col-3 offset-lg-5"></div>
+
+            </div>
+        </div>
     </section>
     <div style="margin:10em"></div>
     <footer class="background-footer">
@@ -81,32 +115,49 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-3">
                     <h4 class="text-color" style="margin-left: 0.7em;">VisitiBel</h4>
                     <img src="../page_estatica/map.png" width="120" height="120" alt="">
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-4">
                     <h4 class="text-color">Deixa tua mensagem para nós!</h2>
-                    <form action="">
-                        <div class="form-group">
-                           <label class="text-color" for="">Nome</label> 
-                           <input type="text" class="form-control" />
-                        </div>
-                        <div class="form-group ">
-                                <label  class="text-color" for="">Email</label>  
-                                <input type="text" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                                <label  class="text-color" for="">Mensagem</label>
-                                  <textarea name="" class="form-control" id="" cols="20" rows="5"></textarea>
-                        </div>
-                    </form>
+                        <form action="">
+                            <div class="form-group">
+                                <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
+                                <label for="formGroupExampleInput" style="color: #fff"
+                                    class="bmd-label-floating">Nome</label>
+                                <input type="text" class="form-control color-input">
+                            </div>
+                            <div class="form-group">
+                                <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
+                                <label for="formGroupExampleInput" style="color: #fff"
+                                    class="bmd-label-floating">email</label>
+                                <input type="text" class="form-control color-input" id="formGroupExampleInput">
+                            </div>
+                            <div class="form-group">
+                                <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
+                                <label for="formGroupExampleInput" style="color: #fff"
+                                    class="bmd-label-floating">Sugestão</label>
+                                <textarea type="text" class="form-control color-input"
+                                    id="formGroupExampleInput"></textarea>
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>
 
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+    crossorigin="anonymous"></script>
+<script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
 
 </html>
