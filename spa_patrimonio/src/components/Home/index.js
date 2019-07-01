@@ -45,7 +45,7 @@ export default props => (
       </section>
       <section className={useStyles.root}>
         <Grid container spacing={3} style={divStyle}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12}>
             <Typography variant="h4">Conheça nossos patrimônios</Typography>
           </Grid>
 
