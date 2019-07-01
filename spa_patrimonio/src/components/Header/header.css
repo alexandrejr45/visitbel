@@ -1,0 +1,16 @@
+.appBar {
+    background: linear-gradient(
+      rgba(105, 28, 72, 0.7),
+      rgba(105, 28, 72, 0.6)
+    ) !important;
+}
+
+.item-menu {
+    color: #fff !important;
+}
+
+.container-grid {
+    margin: 0 !important;
+    text-align: center !important;
+}
+

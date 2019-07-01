@@ -1,0 +1,121 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 960px;
+    width: auto !important;
+  }
+}
+
+.background-home {
+  background: rgba(105, 28, 72, 1);
+  height: 500px;
+}
+.background-conteudo {
+  background: linear-gradient(
+      225deg,
+      rgba(105, 28, 72, 0.5),
+      rgba(105, 28, 72, 0.7)
+    ),
+    url("../img/1ls5635289245409295322.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: auto;
+  max-height: auto;
+  height: 500px;
+}
+.line-border {
+  border-top: 2px solid #fff;
+}
+.ajust-text-conteudo {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.background-img {
+  background-image: linear-gradient(
+      rgba(105, 28, 72, 0.7),
+      rgba(105, 28, 72, 0.6)
+    ),
+    url("../img/forte.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  height: 660px;
+}
+
+.text-color {
+  color: white;
+  font-family: Georgia;
+}
+
+.nav-ajust {
+  list-style: none;
+  display: inline-flex;
+}
+
+.background-footer {
+  background: rgba(105, 28, 72, 1);
+  height: 500px;
+}
+
+.ajuste-tela,
+.row {
+  margin-right: 0 !important;
+}
+
+.ajust-title-conteudo {
+  color: #707070;
+  letter-spacing: 4px;
+  border-spacing: 2px;
+}
+
+.line-border {
+  transform: rotate(34deg);
+  border: 1px solid;
+}
+
+.line-border-title {
+  border-top: 2px solid #fff;
+}
+
+.color-input {
+  color: white;
+}
+
+.nav-inferior {
+  display: none;
+}
+@media (max-width: 720px) {
+  .scroll {
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 5;
+    height: 3.75rem;
+    border-top: 1px solid rgb(240, 240, 242);
+    background: rgb(255, 255, 255);
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .nav-inferior {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-item {
+    padding: 13px 16px 12px;
+    font-size: 14px;
+    padding: 13px 16px 12px;
+  }
+}
