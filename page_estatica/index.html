@@ -4,63 +4,75 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet"
-        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
-        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
     <link href="../page_estatica/style.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- <div class="row ajuste-tela">
-          <div class="col-6">
-            <div class="background-home">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-1">
-                            <a href="../page_estatica/index.html">
-                                <img src="map.png" style="margin-top: 0.5em;" width="50" height="50" alt="" />
-                            </a>
-                        </div>
-
-                        <div class="col-3">
-                            <h4 class="text-color col-md-12" style="margin-top: 1em">VisitBell</h3>
-                        </div>
+    <div class="ajuste-tela">
+        <div class="background-img">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <a href="../page_estatica/index.html">
+                            <img src="map.png" style="margin-top: 1em;" width="50" height="50" alt="" />
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <h4 class="text-color col-md-5" style="margin-top: 1.5em">VisitBell</h3>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12" style="margin-top:5em;margin-left: 3em">
-                            <h2 class="text-color">Um jeito mais fácil de desbravar</br> os patrimônios históricos</h4>
-                        </div>
-                    </div>
-
+                    <nav class="nav nav-none col-6 offset-lg-2">
+                        <a class="nav-link nav-ajust hover-line text-color " href="#">Home</a>
+                        <a class="nav-link nav-ajust hover-line text-color" href="#">Sobre</a>
+                        <a class="nav-link nav-ajust hover-line text-color" href="#">patrimônio</a>
+                        <a class="nav-link nav-ajust hover-line text-color" href="#">Sugestão</a>
+                    </nav>
                 </div>
+
+                <div class="row">
+                    <div class="col-10" style="margin-top:11em;margin-left: 3em">
+                        <h2 class="text-color">Um jeito mais fácil de desbravar</br> os patrimônios históricos</h4>
+                    </div>
+                </div>
+                <div id="scroll-d"><i class="fas fa-angle-double-down" style="font-size: 30px;"></i></div>
             </div>
-    </div>-->
-
-    <div class="background-img">
-        <div class="background-content"></div>
-        <div class="row">
-            <ul class=" col-8 nav-ajust text-color">
-
-                <li class="col-2">Home</li>
-                <li class="col-2">Sobre</li>
-                <li class="col-5">Locais Históricos</li>
-                <li class="col-2">Contato</li>
-            </ul>
         </div>
     </div>
+    <nav class="nav-menu hide-c">
+        <a title="Back to the homepage" class="nav-item tabbar-item">
+            <span>Home</span>
+        </a>
+        <a class="nav-item tabbar-item">
+            <span class="icone"><img src="../page_estatica/flat1_sf .png" width="25" height="25" alt=""> </span>
+
+            <span>patrimônio</span>
+        </a>
+        <a class="nav-item tabbar-item">
+            <span>Sobre</span>
+        </a>
+        <a class="nav-item tabbar-item">
+            <span>Mapa</span>
+        </a>
+    </nav>
+
     <div style="margin:5em"></div>
     <section class="container">
         <div class="row">
-            <div class="col-md-7 offset-md-1" style="margin-top:2em">
+            <div class="col-lg-7 offset-md-1" style="margin-top:2em">
                 <h4>O Centro Histórico na Palma da Sua Mão</h4>
-                <p class="col-md-10" style="margin-top: 2em">Lorem ipsum dolor sit amet,
+                <p class="col-10" style="margin-top: 2em">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit. Proin mollis felis
                     risus,
                     non vehicula tellus aliquet et. Nam id
                     elementum purus. Vivamus ac lobortis massa, et fermentum nisl.
                     Vestibulum et ante a mi molestie feugiat.</p>
+
+                <div class="col-5"><button>Iniciar Imersão</button></div>
             </div>
-            <div class="col-md-3 offset-lg-1">
+
+            <div class="col-3">
                 <img src="Google-Maps.png" width="250" height="450" alt="">
             </div>
         </div>
@@ -83,20 +95,29 @@
         </div>
 
         <div class="row">
-            <div class="col-3 offset-lg-2">
-                <img src="../page_estatica/flat1.png" width="120" height="120" alt="" />
-                <div class=" col-3 offset-lg-5"></div>
-            </div>
-
-            <div class="col-3">
-                <img src="../page_estatica/flat2.png" width="120" height="120" alt="" />
-                <div class="col-3 offset-lg-5"></div>
+            <div class="col-lg-4" style="text-align: center">
+                <img src="../page_estatica/flat1_sf.png" width="120" height="120" alt="Igreja de santo alexandre" />
+                <p>Igreja de Santo Alexandre</p>
+                <p>Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Proin mollis felis
+                    risus,</p>
 
             </div>
 
-            <div class="col-3">
-                <img src="../page_estatica/flat3.png" width="120" height="120" alt="" />
-                <div class="col-3 offset-lg-5"></div>
+            <div class="col-lg-4" style="text-align: center">
+                <img src="../page_estatica/flat2_sf.png" width="120" height="120" alt="" />
+                <p>Igreja da Sé</p>
+                <p>Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Proin mollis felis
+                    risus,</p>
+            </div>
+
+            <div class="col-lg-4" style="text-align: center">
+                <img src="../page_estatica/flat3_sf.png" width="120" height="120" alt="" />
+                <p>Casa das Onze Janelas</p>
+                <p>Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Proin mollis felis
+                    risus,</p>
 
             </div>
         </div>
@@ -106,58 +127,57 @@
         <div class="container">
 
             <div class="row align-items-center">
-                <div class="col-5">
-                    <ul class="nav-ajust text-color">
+                <div class="col-lg-4">
+                    <ul class="nav-ajust list-footer text-color">
                         <li class="col-lg-2">Home</li>
                         <li class="col-lg-2">Sobre</li>
-                        <li class="col-lg-5">Locais Históricos</li>
+                        <li class="col-lg-12">Locais Históricos</li>
                         <li class="col-lg-2">Contato</li>
                     </ul>
                 </div>
 
-                <div class="col-3">
-                    <h4 class="text-color" style="margin-left: 0.7em;">VisitiBel</h4>
+                <div class="col-lg-2" style="text-align: center">
+                    <h4 class="text-color">VisitiBel</h4>
                     <img src="../page_estatica/map.png" width="120" height="120" alt="">
                 </div>
 
-                <div class="col-4">
-                    <h4 class="text-color">Deixa tua mensagem para nós!</h2>
-                        <form action="">
-                            <div class="form-group">
-                                <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
-                                <label for="formGroupExampleInput" style="color: #fff"
-                                    class="bmd-label-floating">Nome</label>
-                                <input type="text" class="form-control color-input">
-                            </div>
-                            <div class="form-group">
-                                <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
-                                <label for="formGroupExampleInput" style="color: #fff"
-                                    class="bmd-label-floating">email</label>
-                                <input type="text" class="form-control color-input" id="formGroupExampleInput">
-                            </div>
-                            <div class="form-group">
-                                <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
-                                <label for="formGroupExampleInput" style="color: #fff"
-                                    class="bmd-label-floating">Sugestão</label>
-                                <textarea type="text" class="form-control color-input"
-                                    id="formGroupExampleInput"></textarea>
-                            </div>
-                        </form>
+                <div class="col-lg-5 offset-lg-1">
+                    <h5 class="text-color">Deixa tua mensagem para nós!</h5>
+                    <form action="">
+                        <div class="form-group">
+                            <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
+                            <label for="formGroupExampleInput" style="color: #fff"
+                                class="bmd-label-floating">Nome</label>
+                            <input type="text" class="form-control color-input btn btn-default">
+                        </div>
+                        <div class="form-group">
+                            <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
+                            <label for="formGroupExampleInput" style="color: #fff"
+                                class="bmd-label-floating">email</label>
+                            <input type="text" class="form-control color-input btn btn-default"
+                                id="formGroupExampleInput">
+                        </div>
+                        <div class="form-group">
+                            <!-- left unspecified, .bmd-form-group will be automatically added (inspect the code) -->
+                            <label for="formGroupExampleInput" style="color: #fff"
+                                class="bmd-label-floating">Sugestão</label>
+                            <textarea type="text" rows="6" class="form-control color-input btn btn-default"
+                                id="formGroupExampleInput"></textarea>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
 
     </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+<script type="text/javascript" src="../page_estatica/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../page_estatica/index.js"></script>
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
     integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
     crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
     integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
     crossorigin="anonymous"></script>
-<script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
 
 </html>
