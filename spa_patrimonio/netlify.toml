@@ -1,9 +1,9 @@
 [build]
-base = "spa_patrimonio/"
+base = "spa_patrimonio"
 publish = "spa_patrimonio/build/"
-command = "yarn build"
+command = "npm run build"
 
 [[redirects]]
 from = "/*"
-to = "/index.html"
+to = "/home"
 status = 200
