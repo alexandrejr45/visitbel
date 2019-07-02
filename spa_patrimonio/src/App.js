@@ -7,7 +7,7 @@ import Header from './components/src/Header'
 export default function App() {
   return (
     <React.Fragment>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Header />
         <Main />
       </BrowserRouter>
