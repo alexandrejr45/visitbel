@@ -1,13 +1,16 @@
 import '../src/css/style.css'
 import React from 'react';
 import Main from  './components/'
-import Header from './components/Header'
+import { BrowserRouter } from "react-router-dom";
+import Header from './components/src/Header'
 
 export default function App() {
   return (
     <React.Fragment>
-      <Header />
-      <Main />
+      <BrowserRouter>
+        <Header />
+        <Main />
+      </BrowserRouter>
     </React.Fragment>
   );
 }

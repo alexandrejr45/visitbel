@@ -1,17 +1,22 @@
 import React from "react";
-import { HashRouter } from "react-router-dom";
 import { Redirect, Route, Switch } from "react-router";
-import Home from './Home'
-import PagePatrimonio from './PagePatrimonio'
+import Home from "./src/Home";
+import PagePatrimonio from "./src/PagePatrimonios";
+import Patrimonio from "./src/Patrimonio";
 
-export default props => {
+const Main = () => {
   return (
-      <HashRouter>
-        <Switch>
-          <Route path="/home" component={Home} />
-          <Route path="/patrimonio" component={PagePatrimonio} />
-          <Redirect from="*" to="/home" />
-        </Switch>
-      </HashRouter>
+    <React.Fragment>
+      <main>
+          <Switch>
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/patrimonio" component={PagePatrimonio} />
+            <Route exact path="/patrimonio/:id" component={Patrimonio}/>
+            <Redirect from="*" to="/home" />
+          </Switch>
+      </main>
+    </React.Fragment>
   );
 };
+
+export default Main;
