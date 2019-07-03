@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <div class="background-conteudo img-fluid">
         <div class="container">
             <div class="row">
@@ -24,14 +23,20 @@
                 <div class="col-md-3">
                     <h4 class="text-color col-md-12" style="margin-top: 1em">VisitBell</h3>
                 </div>
-                <nav class="nav nav-menu col-lg-7 offset-lg-1">
+                <nav class="nav nav-menu col-lg-7">
                     <a class="nav-link nav-item tabbar-item nav-ajust hover-line text-nav " href="#">Home</a>
                     <a class="nav-link nav-item tabbar-item nav-ajust hover-line text-nav" href="#">Sobre</a>
                     <a class="nav-link nav-item tabbar-item nav-ajust hover-line text-nav" href="#">patrimônio</a>
                     <a class="nav-link nav-item tabbar-item nav-ajust hover-line text-nav" href="#">Sugestão</a>
                 </nav>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <nav id="call-menu" style="display: none">
+                            <p>Só um menuzinho aqui!</p>
+                        </nav>
+                    </div>
+                </div>
             </div>
-           
 
             <div class="row">
                 <div class="col-md-5" style="margin-top:5em">
@@ -48,8 +53,14 @@
             </div>
         </div>
     </div>
+    <div class="col-lg-6 circle-nav buttom-responsive" onclick="btn_menu_patrimonio()">
+        <svg version="1.1" id="Capa_1" x="0px" y="0px" style="padding-top: 14px;" viewBox="0 0 31.49 31.49"
+            style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve">
+            <path style="fill:#ffff;" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111
+            C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587
+            c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" />
+        </svg>
     </div>
-
     <div style="margin:5em"></div>
 
     <section class="container">
@@ -214,5 +225,7 @@
 
     </footer>
 </body>
+<script type="text/javascript" src="../page_estatica/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../page_estatica/index.js"></script>
 
 </html>
