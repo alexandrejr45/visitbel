@@ -9,7 +9,7 @@ if (workbox) {
 }
 
 self.addEventListener("fetch", event => {
-  if (event.request.url.endsWith(/\.(?:png|jpg|jpeg|svg|gif)$/)) {
+  if (event.request.url.endsWith(/\.(?:png|jpg|jpeg|svg|gif|css|js|html)$/)) {
     // Oops! This causes workbox-strategies.js to be imported inside a fetch handler,
     // outside of the initial, synchronous service worker execution.
     const cacheFirst = new workbox.strategies.CacheFirst();
