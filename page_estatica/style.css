@@ -105,6 +105,22 @@
     color: white;
 }
 
+.add-line{
+   background: black;
+    margin-left: 4em;
+    height: 50px;
+    width: 1px;
+}
+.add-line-left{
+    background: black;
+    margin-left: 4em;
+    height: 2px;
+    width: 12px;
+}
+#line_down, #line_left {
+    position: relative;
+    cursor: pointer;
+  }
 #scroll-d {
     position: absolute;
     bottom: 5%;
@@ -118,6 +134,10 @@
 }
 .icon-ajust{
 display: none;
+}
+.shadow-img{
+    box-shadow: 3px 5px 4px -1px rgba(1,1,1,1);
+
 }
 
 @media (max-width:720px){
