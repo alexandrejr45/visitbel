@@ -58,7 +58,7 @@
 }
 
 .text-color{
-    color: white;
+    color: white !important;
     font-family: 'montserrat-light';
     
 }
@@ -137,7 +137,16 @@ display: none;
 }
 .shadow-img{
     box-shadow: 3px 5px 4px -1px rgba(1,1,1,1);
-
+}
+.background-article{
+    background: url("../page_estatica/img/igreja_se/backgrund-se.png") no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+}
+.background-article-nsra{
+    background: url(../page_estatica/img/igreja_se/background-se03.png) no-repeat fixed;
+    background-size: cover;
+    width: 100%;
 }
 
 @media (max-width:720px){
