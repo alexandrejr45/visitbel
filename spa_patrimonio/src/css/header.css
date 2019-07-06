@@ -65,3 +65,10 @@
     display: inline;
   }
 }
+
+@media (max-width: 420px) {
+  .icon-ajust {
+    font-size: 12px !important;
+    display: inline;
+  }
+}
