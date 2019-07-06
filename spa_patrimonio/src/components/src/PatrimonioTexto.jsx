@@ -25,7 +25,7 @@ function PatrimonioTexto(props) {
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="p" className="texto_historia">
+            <Typography className="texto_historia">
                 {tipo_patrimonio.historia}
             </Typography>
           </Grid>

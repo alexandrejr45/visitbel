@@ -8,7 +8,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import igreja_santo_alexandre_icon from "../../img/flat1.png";
@@ -24,7 +24,8 @@ const useStyles = makeStyles({
   },
   root: {
     flexGrow: 1
-  }
+  },
+  margin: "5em"
 });
 
 const PagePatrimonio = () => {
@@ -32,6 +33,7 @@ const PagePatrimonio = () => {
 
   return (
     <Container maxWidth="md">
+      <div style={useStyles.margin} />
       <section id="patrimonio-content" style={useStyles.root}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={4}>

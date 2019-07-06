@@ -1,17 +1,73 @@
+@font-face {
+  font-family: montserrat-light !important;
+  src: url("../../src/fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: montserrat-semibold !important;
+  src: url("../../src/fonts/Montserrat-SemiBold.ttf");
+}
+
 .appBar {
-    background: linear-gradient(
-      rgba(105, 28, 72, 0.7),
-      rgba(105, 28, 72, 0.6)
-    ) !important;
+  background: linear-gradient(
+    rgba(105, 28, 72, 0.7),
+    rgba(105, 28, 72, 0.6)
+  ) !important;
+}
+
+.link-menu {
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .item-menu {
-    color: #fff !important;
-    text-decoration: none;
+  display: inline !important;
+  padding-right: 30px;
 }
-
 .container-grid {
-    margin: 0 !important;
-    text-align: center !important;
+  margin: 0 !important;
+  text-align: center !important;
 }
 
+.icon-ajust {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .header-itens {
+    display: none;
+  }
+  .background-menu {
+    background: #ffff;
+    z-index: 6;
+    font-size: 16px;
+    height: 630px;
+    width: 320px;
+    position: fixed;
+    display: block !important;
+    bottom: 0;
+    top: 0;
+    transition: 1s;
+  }
+
+  .item-menu {
+    display: inline !important;
+    padding-right: 30px;
+  }
+
+  .menu {
+    display: inline !important;
+  }
+
+  .icon-ajust {
+    font-size: 16px !important;
+    display: inline;
+  }
+}
+
+@media (max-width: 420px) {
+  .icon-ajust {
+    font-size: 12px !important;
+    display: inline;
+  }
+}
