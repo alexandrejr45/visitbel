@@ -1,3 +1,13 @@
+@font-face {
+    font-family: montserrat-light !important;
+    src: url('../../src/fonts/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: montserrat-semibold !important;
+    src: url('../../src/fonts/Montserrat-SemiBold.ttf');
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 960px;
@@ -8,6 +18,7 @@
 .background-home {
   background: rgba(105, 28, 72, 1);
   height: 500px;
+
 }
 .background-conteudo {
   background: linear-gradient(
@@ -40,6 +51,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 0;
   background-repeat: no-repeat;
   height: 660px;
 }
