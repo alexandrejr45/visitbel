@@ -24,10 +24,8 @@
 }
 .background-conteudo{
     background: linear-gradient(225deg, rgba(105, 28, 72, 0.5), rgba(105, 28, 72, 0.7))
-    , url("../page_estatica/1ls5635289245409295322.jpg");
+    , url("../page_estatica/1ls5635289245409295322.jpg") no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     width: auto;
     max-height:auto;
     height: 500px;
@@ -50,10 +48,13 @@
     height: 660px;
 }
 
+.background-about{
+    background: url("../page_estatica/img/igreja_se/background-about01.png") no-repeat;
+    background-size: cover;
+}
 .text-nav{
     color: white;
     font-family: 'montserrat-semibold';
-        text-transform: lowercase;
     
 }
 
@@ -73,6 +74,7 @@
 }
 #scroll-d {
     animation:bounce 3s infinite;
+    cursor: pointer;
   }
   
   @keyframes bounce {
@@ -222,6 +224,7 @@ display: none;
         .text-nav{
             color: black;
             font-size: 10px;
+            text-transform: lowercase;
         }
         .hover-line:hover{
             border-bottom: none;
