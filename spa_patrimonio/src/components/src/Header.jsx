@@ -1,7 +1,7 @@
+import "../../css/header.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import imgMap from '../../img/map.png' 
-import "../../css/header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
             <Link to="/home">
               <img
                 src={imgMap}
-                style={{ marginTop: 1.5 + "em" }}
+                style={{ marginTop: 1 + "em" }}
                 width="50"
                 height="50"
                 alt=""
@@ -40,9 +40,6 @@ const Header = () => {
                 height="30"
                 alt=""
               />
-              <p className="col-md-12" style={{ marginTop: 1 + "em" }}>
-                VisitBell
-              </p>
             </Link>
             <Link
               className="nav-link nav-item tabbar-item nav-ajust hover-line text-nav"

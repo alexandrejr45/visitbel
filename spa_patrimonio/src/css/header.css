@@ -30,7 +30,10 @@
   margin-top: 2em;
   font-size: 16px;
   color: white;
+  list-style: none;
+  display: inline-flex;
 }
+
 
 .text-nav {
   color: white;
@@ -90,8 +93,8 @@
 
   .nav-item {
     flex: 1;
-    display: flex !important;
-    align-items: center !important;
+    display: flex ;
+    align-items: center;
     align-content: center;
     position: relative;
   }
@@ -155,11 +158,5 @@
   .icon-ajust {
     font-size: 16px;
     display: block;
-  }
-}
-
-@media (max-width: 420px) {
-  .icon-ajust {
-    font-size: 12px !important;
   }
 }
