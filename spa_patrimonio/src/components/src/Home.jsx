@@ -1,110 +1,158 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import imgMaps1 from "../../img/Google-Maps.png";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import googleMapsImg from "../../img/Google-Maps.png";
 import igreja_santo_alexandre_icon from "../../img/flat1.png";
 import igreja_se_icon from "../../img/flat2.png";
-import forte_icon from "../../img/flat3.png";
-
-const divStyle = {
-  marginTop: "2em",
-  textAlign: "center"
-};
-
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1
-  }
-});
+import casa_das_onze_janelas from "../../img/flat3.png";
 
 const Home = () => {
   return (
     <React.Fragment>
-      <div className="background-img">
-        <div className="background-content" />
+      <div className="ajuste-tela">
+        <div className="background-img">
+          <div className="container">
+            <div className="row" />
+
+            <div className="row">
+              <div
+                className="col-10"
+                style={{ marginTop: 11 + "em", marginLeft: 3 + "em" }}
+              >
+                <h2 className="text-color">
+                  Um jeito mais fácil de desbravar <br /> os patrimônios
+                  históricos
+                </h2>
+              </div>
+            </div>
+
+            <div id="scroll-d" onClick={scrollArrow}>
+              <i style={{ fontSize: 30 + "px" }}>
+                <FontAwesomeIcon icon="angle-double-down" />
+              </i>
+            </div>
+          </div>
+        </div>
       </div>
-      <Container maxWidth="md">
-        <section className={useStyles.root}>
-          <Grid container spacing={3} style={divStyle}>
-            <Grid item xs={12} sm={6}>
-              <Typography variant="h4">
-                O Centro Histórico na Palma da Sua Mão
-              </Typography>
-              <Typography style={divStyle}>
+      <section id="down" className="background-about">
+        <div className="container">
+          <div className="row">
+            <div
+              className="col-lg-7 text-center offset-md-1 ajust-text-conteudo text-color"
+              style={{ paddingTop: 5 + "em" }}
+            >
+              <h4>O Centro Histórico na Palma da Sua Mão</h4>
+              <p
+                className="col-lg-10"
+                style={{ marginTop: 2 + "em", fontWeight: "normal" }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 mollis felis risus, non vehicula tellus aliquet et. Nam id
                 elementum purus. Vivamus ac lobortis massa, et fermentum nisl.
                 Vestibulum et ante a mi molestie feugiat.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <img src={imgMaps1} width="250" height="450" alt="" />
-            </Grid>
-          </Grid>
-        </section>
-        <section className={useStyles.root}>
-          <Grid container spacing={3} style={divStyle}>
-            <Grid item xs={12}>
-              <Typography variant="h4">Conheça nossos patrimônios</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography>
+              </p>
+
+              <div className="col-lg-5">
+                <button>Iniciar Imersão</button>
+              </div>
+            </div>
+
+            <div className="col-lg-3 text-center" style={{ top: 7 + "em" }}>
+              <img src={googleMapsImg} width="250" height="450" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div style={{ marginTop: 10 + "em" }} />
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h4 style={{ textAlign: "center" }}>
+                Conheça nossos patrimônios
+              </h4>
+            </div>
+            <div className="col-12" style={{ marginTop: 1 + "em" }}>
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 mollis felis risus, non vehicula tellus aliquet et. Nam id
                 elementum purus. Vivamus ac lobortis massa, et fermentum nisl.
-                Vestibulum et ante a mi molestie feugiat
-              </Typography>
-            </Grid>
-
-            <Grid item xs={12} sm={4}>
-              <Link to="/patrimonio/igreja-da-se" className="patrimonio_home">
-                <img
-                  src={igreja_se_icon}
-                  width="120"
-                  height="120"
-                  alt="Imagem da catedral da Sé"
-                />
-                <Typography>Catedral da Sé</Typography>
-              </Link>
-            </Grid>
-            <Grid item xs={12} sm={4}>
+                Vestibulum et ante a mi molestie feugiat:
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-4" style={{ textAlign: "center" }}>
               <Link
                 to="/patrimonio/igreja-de-santo-alexandre"
-                className="patrimonio_home"
+                style={{ textDecoration: "none" }}
               >
                 <img
                   src={igreja_santo_alexandre_icon}
                   width="120"
                   height="120"
-                  alt="Imagem da catedral da Sé"
+                  alt="Igreja de santo alexandre"
                 />
-                <Typography>Igreja de Santo Alexandre</Typography>
+                <p style={{ color: "rgba(0, 0, 0, 0.87)" }}>
+                  Igreja de Santo Alexandre
+                </p>
               </Link>
-            </Grid>
-            <Grid item xs={12} sm={4}>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                mollis felis risus,
+              </p>
+            </div>
+
+            <div className="col-lg-4" style={{ textAlign: "center" }}>
+              <Link
+                to="/patrimonio/igreja-da-se"
+                style={{ textDecoration: "none" }}
+              >
+                <img src={igreja_se_icon} width="120" height="120" alt="" />
+                <p style={{ color: "rgba(0, 0, 0, 0.87)" }}>Igreja da Sé</p>
+              </Link>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                mollis felis risus,
+              </p>
+            </div>
+
+            <div className="col-lg-4" style={{ textAlign: "center" }}>
               <Link
                 to="/patrimonio/casa-das-onze-janelas"
-                className="patrimonio_home"
+                style={{ textDecoration: "none" }}
               >
                 <img
-                  src={forte_icon}
+                  src={casa_das_onze_janelas}
                   width="120"
                   height="120"
-                  alt="Imagem da catedral da Sé"
+                  alt=""
                 />
-                <Typography aria-labelledby="nome_patrimonio">
+                <p style={{ color: "rgba(0, 0, 0, 0.87)" }}>
                   Casa das Onze Janelas
-                </Typography>
+                </p>
               </Link>
-            </Grid>
-          </Grid>
-        </section>
-      </Container>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                mollis felis risus,
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </React.Fragment>
   );
 };
+
+function scrollArrow() {
+  let elemento = document.querySelector("#down");
+  let offset = elemento.offsetTop;
+
+  window.scroll({
+    top: offset,
+    left: 0,
+    behavior: "smooth"
+  });
+}
 
 export default Home;

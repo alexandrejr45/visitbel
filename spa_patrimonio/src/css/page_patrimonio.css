@@ -1,3 +1,19 @@
-#patrimonio-content {
-    padding-top: 50px;
+@font-face {
+  font-family: montserrat-light;
+  src: url("../../src/fonts/Montserrat-Light.ttf");
 }
+
+@font-face {
+  font-family: montserrat-semibold;
+  src: url("../../src/fonts/Montserrat-SemiBold.ttf");
+}
+
+#patrimonio-content{
+    padding-top: 50px;
+    font-family: 'montserrat-semibold';
+}
+
+.card-content {
+    font-family: 'montserrat-semibold';
+}
+

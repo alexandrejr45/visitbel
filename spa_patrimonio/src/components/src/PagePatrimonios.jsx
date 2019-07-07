@@ -38,7 +38,7 @@ const PagePatrimonio = () => {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={4}>
             <Card className={classes.card}>
-              <CardActionArea>
+              <CardActionArea className="card-content">
                 <CardMedia
                   className={classes.media}
                   image={igreja_se_icon}
@@ -66,7 +66,7 @@ const PagePatrimonio = () => {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Card className={classes.card}>
-              <CardActionArea>
+              <CardActionArea className="card-content">
                 <CardMedia
                   className={classes.media}
                   image={igreja_santo_alexandre_icon}
@@ -96,7 +96,7 @@ const PagePatrimonio = () => {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Card className={classes.card}>
-              <CardActionArea>
+              <CardActionArea className="card-content">
                 <CardMedia
                   className={classes.media}
                   image={forte_icon}
@@ -117,7 +117,9 @@ const PagePatrimonio = () => {
               </CardActionArea>
               <CardActions>
                 <Button size="small" color="primary">
-                  <Link to="/patrimonio/casa-das-onze-janelas">Learn More</Link>
+                  <Link to="/patrimonio/casa-das-onze-janelas">
+                    Learn More
+                  </Link>
                 </Button>
               </CardActions>
             </Card>

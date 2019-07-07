@@ -1,11 +1,11 @@
 @font-face {
-    font-family: montserrat-light !important;
-    src: url('../../src/fonts/Montserrat-Light.ttf');
+  font-family: montserrat-light !important;
+  src: url("../../src/fonts/Montserrat-Light.ttf");
 }
 
 @font-face {
-    font-family: montserrat-semibold !important;
-    src: url('../../src/fonts/Montserrat-SemiBold.ttf');
+  font-family: montserrat-semibold !important;
+  src: url("../../src/fonts/Montserrat-SemiBold.ttf");
 }
 
 @media (min-width: 1200px) {
@@ -13,20 +13,36 @@
     max-width: 960px;
     width: auto !important;
   }
-}
 
+  #scroll-d {
+    animation:bounce 3s infinite;
+    cursor: pointer;
+  }
+  #scroll-d {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    color: #F0FFFF;
+    font-size: 6em;
+    font-weight: 200;
+  }
+  @keyframes bounce {
+    0%       { top:450px; }
+    25%, 75% { top:455px; }
+    50%      { top:460px; }
+    100%     {top:445px;}
+  }
+}
 .background-home {
   background: rgba(105, 28, 72, 1);
   height: 500px;
-
 }
 .background-conteudo {
   background: linear-gradient(
       225deg,
       rgba(105, 28, 72, 0.5),
       rgba(105, 28, 72, 0.7)
-    ),
-    url("../img/1ls5635289245409295322.jpg");
+    );
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -69,6 +85,11 @@
 .background-footer {
   background: rgba(105, 28, 72, 1);
   height: 500px;
+}
+
+.background-about{
+    background: url("../../src/img/igreja_se/background-about01.png") no-repeat;
+    background-size: cover;
 }
 
 .ajuste-tela,
@@ -132,7 +153,7 @@
   }
 }
 
-.patrimonio_home{
+.patrimonio_home {
   text-decoration: none;
   color: black;
 }

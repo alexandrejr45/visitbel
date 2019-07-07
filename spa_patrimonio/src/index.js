@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.css";
+import "../src/css/style.css";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
