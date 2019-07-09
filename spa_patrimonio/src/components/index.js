@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import { Redirect, Route, Switch } from "react-router";
 import Home from "./src/Home";
 import PagePatrimonio from "./src/PagePatrimonios";
@@ -7,7 +7,7 @@ import Patrimonio from "./src/Patrimonio";
 
 const Main = () => {
   return (
-    <React.Fragment>
+    <Fragment>
       <main>
           <Switch>
             <Route exact path="/home" component={Home} />
@@ -17,7 +17,7 @@ const Main = () => {
             <Redirect from="*" to="/home" />
           </Switch>
       </main>
-    </React.Fragment>
+    </Fragment>
   );
 };
 

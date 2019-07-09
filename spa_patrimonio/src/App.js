@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Main from  './components/'
 import { BrowserRouter } from "react-router-dom";
 import Header from './components/src/Header'
@@ -9,11 +9,11 @@ library.add(fas);
 
 export default function App() {
   return (
-    <React.Fragment>
+    <Fragment>
       <BrowserRouter basename="/">
         <Header />
         <Main />
       </BrowserRouter>
-    </React.Fragment>
+    </Fragment>
   );
 }
