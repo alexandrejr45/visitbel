@@ -1,0 +1,32 @@
+#historia {
+  margin-top: 40px;
+}
+
+.titulo_historia {
+  text-align: center !important;
+}
+
+.background-conteudo {
+  background: linear-gradient(
+    225deg,
+    rgba(105, 28, 72, 0.5),
+    rgba(105, 28, 72, 0.7)
+  );
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: auto;
+  max-height: auto;
+  height: 500px;
+}
+
+.line-border {
+  border-top: 2px solid #fff;
+}
+
+.add-line {
+  background: black;
+  margin-left: 4em;
+  height: 50px;
+  width: 1px;
+}

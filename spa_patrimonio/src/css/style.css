@@ -45,22 +45,7 @@
   background: rgba(105, 28, 72, 1);
   height: 500px;
 }
-.background-conteudo {
-  background: linear-gradient(
-    225deg,
-    rgba(105, 28, 72, 0.5),
-    rgba(105, 28, 72, 0.7)
-  );
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  width: auto;
-  max-height: auto;
-  height: 500px;
-}
-.line-border {
-  border-top: 2px solid #fff;
-}
+
 .ajust-text-conteudo {
   font-weight: bold;
   font-style: italic;
@@ -106,11 +91,6 @@
   border-spacing: 2px;
 }
 
-.line-border {
-  transform: rotate(34deg);
-  border: 1px solid;
-}
-
 .line-border-title {
   border-top: 2px solid #fff;
 }
@@ -122,7 +102,6 @@
 .nav-inferior {
   display: none;
 }
-
 
 .patrimonio_home {
   text-decoration: none;
