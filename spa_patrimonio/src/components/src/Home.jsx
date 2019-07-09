@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import googleMapsImg from "../../img/Google-Maps.png";
@@ -8,7 +8,7 @@ import casa_das_onze_janelas from "../../img/flat3.png";
 
 const Home = () => {
   return (
-    <React.Fragment>
+    <Fragment>
       <div className="ajuste-tela">
         <div className="background-img">
           <div className="container">
@@ -51,12 +51,10 @@ const Home = () => {
                 elementum purus. Vivamus ac lobortis massa, et fermentum nisl.
                 Vestibulum et ante a mi molestie feugiat.
               </p>
-
               <div className="col-lg-5">
                 <button>Iniciar Imersão</button>
               </div>
             </div>
-
             <div className="col-lg-3 text-center" style={{ top: 7 + "em" }}>
               <img src={googleMapsImg} width="250" height="450" alt="" />
             </div>
@@ -140,7 +138,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </React.Fragment>
+    </Fragment>
   );
 };
 
