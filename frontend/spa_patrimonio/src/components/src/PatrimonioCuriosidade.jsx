@@ -30,20 +30,6 @@ function PatrimonioCuriosidade(props) {
                 {props.conteudo.curiosidade}
               </p>
             </div>
-            <div className="col-lg-12">
-              <img
-                src={props.conteudo.imgConteudo[3]}
-                width="250"
-                height="150"
-                alt="Parte de dentro da igreja da Sé"
-              />
-              <img
-                src={props.conteudo.imgConteudo[3]}
-                width="250"
-                height="150"
-                alt="Parte de dentro da igreja da Sé"
-              />
-            </div>
           </article>
         </div>
       </section>

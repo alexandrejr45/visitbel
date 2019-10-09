@@ -15,7 +15,6 @@ self.addEventListener("fetch", event => {
       new workbox.strategies.NetworkFirst()
     );
 
-
     workbox.routing.registerRoute(
       // Cache image files.
       /\.(?:png|jpg|jpeg|svg|gif|ttf)$/,

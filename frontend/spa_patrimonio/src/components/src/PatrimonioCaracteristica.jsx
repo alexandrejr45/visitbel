@@ -31,22 +31,6 @@ function PatrimonioCaracteristica (props) {
                   {props.conteudo.caracteristica}
                 </p>
               </div>
-              <div className="col-lg-7">
-                <img
-                  src={props.conteudo.imgConteudo[3]}
-                  className="img-fluid"
-                  width="250"
-                  height="150"
-                  alt=""
-                />
-                <img
-                  src={props.conteudo.imgConteudo[3]}
-                  className="img-fluid"
-                  width="250"
-                  height="150"
-                  alt=""
-                />
-              </div>
             </article>
 
             <div style={{ marginBottom: 3 + "em" }} />
