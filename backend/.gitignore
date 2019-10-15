@@ -9,7 +9,7 @@ firebase-debug.log*
 *.lock
 *.rules
 .babelrc
-
+lib
 
 # Firebase cache
 .firebase/

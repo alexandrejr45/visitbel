@@ -1,13 +1,9 @@
 const express = require('express');
-const firebase = require('./firebaseConfig');
+const routes = require('./routes');
+const helmet = require('helmet');
 
 const app = express();
-const connection = firebase.saveContentDocument(
-  'Igreja da Sé',
-  'História',
-  'A igreja foi fundada em...',
-);
 
-app.get('/', (req, res) => res.send('Hello world'));
-
+app.use(helmet());
+app.use(routes);
 app.listen(4000);
