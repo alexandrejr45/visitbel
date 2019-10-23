@@ -1,6 +1,5 @@
-import * as firebase from "firebase/app";
+import * as firebase from "firebase";
 import "firebase/firestore";
-
 
 function checkSetup() {
   if (
@@ -39,9 +38,6 @@ export function saveMessage(messageText) {
 export function initFirebase() {
   checkSetup();
 
-  firebase.initializeApp({
-    credential: firebase.credential.applicationDefault(),
-    storageBucket: 'patrimonioapp-1562254085175.appspot.com',
-  });
+  firebase.initializeApp(process.env.FIREBASE_CONFIG);
   return firebase;
 }
