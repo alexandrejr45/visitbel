@@ -71,6 +71,7 @@
     z-index: 6;
     right: 0;
     left: 0;
+    top: 90%;
     background-color: #fff;
     box-shadow: 0 -1px rgba(84, 50, 67, 0.1);
     display: flex;

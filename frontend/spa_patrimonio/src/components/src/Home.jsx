@@ -1,40 +1,41 @@
-import React, {Fragment} from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import googleMapsImg from "../../img/Google-Maps.png";
-import igreja_santo_alexandre_icon from "../../img/flat1.png";
-import igreja_se_icon from "../../img/flat2.png";
-import casa_das_onze_janelas from "../../img/flat3.png";
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import googleMapsImg from '../../img/Google-Maps.png';
+import igreja_santo_alexandre_icon from '../../img/flat1.png';
+import igreja_se_icon from '../../img/flat2.png';
+import casa_das_onze_janelas from '../../img/flat3.png';
 
 const Home = () => {
+  const styleCenter = [-50 + "%", -50+ "%"];
+
   return (
     <Fragment>
       <div className="ajuste-tela">
         <div className="background-img">
           <div className="container">
-            <div className="row" />
-
-            <div className="row">
-              <div
-                className="col-10"
-                style={{ marginTop: 11 + "em", marginLeft: 3 + "em" }}
-              >
-                <h2 className="text-color">
-                  Um jeito mais fácil de desbravar <br /> os patrimônios
-                  históricos
-                </h2>
-              </div>
+            <div className="texto-home">
+              <h2
+                className="text-color"
+                style={{
+                  top: 50 + '%',
+                  left: 50 + '%',
+                  position: 'absolute',
+                  marginRight: -50 + 'px',
+                  transform: `translate(${styleCenter})`,
+                }}
+              > O que você deseja fazer?</h2>
             </div>
 
-            <div id="scroll-d" onClick={scrollArrow}>
+            {/* <div id="scroll-d" onClick={scrollArrow}>
               <i style={{ fontSize: 30 + "px" }}>
                 <FontAwesomeIcon icon="angle-double-down" />
               </i>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
-      <section id="down" className="background-about">
+      {/* <section id="down" className="background-about">
         <div className="container">
           <div className="row">
             <div
@@ -61,8 +62,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div style={{ marginTop: 10 + "em" }} />
-      <section>
+      <div style={{ marginTop: 10 + "em" }} /> */}
+      {/* <section>
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -137,19 +138,19 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Fragment>
   );
 };
 
 function scrollArrow() {
-  let elemento = document.querySelector("#down");
+  let elemento = document.querySelector('#down');
   let offset = elemento.offsetTop;
 
   window.scroll({
     top: offset,
     left: 0,
-    behavior: "smooth"
+    behavior: 'smooth',
   });
 }
 
