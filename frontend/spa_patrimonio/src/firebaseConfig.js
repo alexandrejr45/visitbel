@@ -1,4 +1,3 @@
-import firebaseAuth from './firebaseAuth';
 import * as firebase from "firebase/app";
 import "firebase/firestore";
 
@@ -40,6 +39,9 @@ export function saveMessage(messageText) {
 export function initFirebase() {
   checkSetup();
 
-  firebase.initializeApp(firebaseAuth);
+  firebase.initializeApp({
+    credential: firebase.credential.applicationDefault(),
+    storageBucket: 'patrimonioapp-1562254085175.appspot.com',
+  });
   return firebase;
 }
