@@ -19,5 +19,5 @@ ReactDOM.render(
 );
 
 firebase.initFirebase();
-//firebase.saveMessage("Olá, mundo")
+firebase.saveMessage("Olá, mundo")
 serviceWorker.register();

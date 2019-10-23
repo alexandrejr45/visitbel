@@ -1,4 +1,4 @@
-import * as firebase from "firebas/app";
+import * as firebase from "firebase/app";
 import "firebase/firestore";
 
 function checkSetup() {
