@@ -1,6 +1,6 @@
 [build]
-base = "spa_patrimonio"
-publish = "spa_patrimonio/build/"
+base = "frontend/spa_patrimonio"
+publish = "frontend/spa_patrimonio/build/"
 command = "npm run build"
 
 [[redirects]]
