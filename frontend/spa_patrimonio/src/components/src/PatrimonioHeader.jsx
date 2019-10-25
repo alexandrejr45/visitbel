@@ -37,7 +37,7 @@ function PatrimonioHeader (props) {
           </div>
         </div>
       </div>
-      <div style={{ margin: 5 + "em" }} />
+      <div style={{ marginTop: 1 + "em" }} />
     </Fragment>
   );
 }

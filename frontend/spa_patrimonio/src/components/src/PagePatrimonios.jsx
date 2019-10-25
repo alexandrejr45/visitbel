@@ -86,7 +86,7 @@ const PagePatrimonio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
+                <Button size="small" style={{color: `rgba(105, 28, 72, 0.6)`}}>
                   <Link to="/patrimonio/igreja-de-santo-alexandre">
                     Learn More
                   </Link>

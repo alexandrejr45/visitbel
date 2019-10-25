@@ -12,7 +12,7 @@ const Main = () => {
           <Switch>
             <Route exact path="/home" component={Home} />
             <Route exact path="/patrimonio" component={PagePatrimonio} />
-            <Route exact path="/patrimonio/:id" component={Patrimonio}/>
+            <Route exact path="/patrimonio/:id" component={Patrimonio} />
             {/* <Route exact path='/sidebar' component={PatrimonioSideBar} /> */}
             <Redirect from="*" to="/home" />
           </Switch>

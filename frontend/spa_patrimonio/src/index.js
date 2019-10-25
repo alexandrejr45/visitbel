@@ -18,6 +18,6 @@ ReactDOM.render(
   document.querySelector("#root")
 );
 
-firebase.initFirebase();
-firebase.saveMessage("Olá, mundo")
+//firebase.initFirebase();
+//firebase.saveMessage("Olá, mundo")
 serviceWorker.register();

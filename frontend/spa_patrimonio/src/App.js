@@ -1,9 +1,9 @@
-import React, {Fragment} from 'react';
-import Main from  './components/'
-import { BrowserRouter } from "react-router-dom";
-import Header from './components/src/Header'
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {fas} from '@fortawesome/free-solid-svg-icons';
+import React, { Fragment, Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+const Main = React.lazy(() => import('./components/index'));
+const Header = React.lazy(() => import('./components/src/Header'));
 
 library.add(fas);
 
@@ -11,8 +11,10 @@ export default function App() {
   return (
     <Fragment>
       <BrowserRouter basename="/">
-        <Header />
-        <Main />
+        <Suspense fallback={<div>Carregando...</div>}>
+            <Header />
+            <Main />
+        </Suspense>
       </BrowserRouter>
     </Fragment>
   );

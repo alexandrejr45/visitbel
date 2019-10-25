@@ -1,4 +1,5 @@
 import * as firebase from "firebase/app";
+import firebaseConfig from './auth';
 import "firebase/firestore";
 
 function checkSetup() {
@@ -24,7 +25,8 @@ export function saveMessage(messageText) {
   // Add a new message entry to the Firebase database.
   return firebase
     .firestore()
-    .collection("messages")
+    .collection("patrimonio")
+    .doc("igreja-da-se")
     .add({
       name: "Alexandre",
       text: messageText,
@@ -38,6 +40,6 @@ export function saveMessage(messageText) {
 export function initFirebase() {
   checkSetup();
 
-  firebase.initializeApp(process.env.FIREBASE_CONFIG);
+  firebase.initializeApp(firebaseConfig);
   return firebase;
 }

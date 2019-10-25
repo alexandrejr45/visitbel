@@ -7,6 +7,9 @@ const theme = createMuiTheme({
     primary: {
       main: 'rgba(105, 28, 72, 0.702)',
     },
+    purple: {
+      main: 'rgba(105, 28, 72, 0.6)'
+    },
     secondary: {
       main: '#19857b',
     },
