@@ -59,7 +59,7 @@ export default function IgrejaSePatrimonio() {
 
   return (
     <Fragment>
-      <PatrimonioHeader conteudo={objetoConteudo} />
+      <PatrimonioHeader conteudo={objetoConteudo} A/>
        <Container>
          <section>
           <Grid container spacing={2}>
