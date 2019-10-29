@@ -33,6 +33,7 @@ const PagePatrimonio = () => {
 
   return (
     <Container maxWidth="md">
+
       <div style={useStyles.margin} />
       <section id="patrimonio-content" style={useStyles.root}>
         <Grid container spacing={3}>
@@ -86,7 +87,7 @@ const PagePatrimonio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" style={{color: `rgba(105, 28, 72, 0.6)`}}>
+                <Button size="small" style={{ color: `rgba(105, 28, 72, 0.6)` }}>
                   <Link to="/patrimonio/igreja-de-santo-alexandre">
                     Learn More
                   </Link>

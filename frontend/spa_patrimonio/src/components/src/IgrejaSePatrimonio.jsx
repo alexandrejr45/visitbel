@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import PatrimonioHeader from './PatrimonioHeader';
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
@@ -17,7 +17,7 @@ import PatrimonioCuriosidade from './PatrimonioCuriosidade'
 import img_historia from '../../img/old-letters-1082299_640.jpg'
 import texto from '../../texts/igreja_da_se.json';
 import img_igreja_se from '../../img/igreja_se.jpg';
-import img_default from '../../img/c.se.jpg'
+import img_default from '../../img/igreja_se/c.se.jpg'
 import img_background_about from '../../img/igreja_se/background-about.png';
 import img_background_about_1 from '../../img/igreja_se/background-about01.png';
 import img_background_section from '../../img/igreja_se/backgrund-se.png';
@@ -25,6 +25,7 @@ import img_background_section_1 from '../../img/igreja_se/background-se03.png';
 import img_texto from '../../img/igreja_se/img-se-2.jpg';
 import img_texto_1 from '../../img/igreja_se/img-se-3.jpg';
 import img_texto_2 from '../../img/igreja_se/img-se-5.jpg';
+import MenuPatrimonio from './MenuPatrimonio'
 
 const objetoConteudo = {
   id: [0, 1],
@@ -59,106 +60,108 @@ export default function IgrejaSePatrimonio() {
 
   return (
     <Fragment>
-      <PatrimonioHeader conteudo={objetoConteudo} A/>
-       <Container>
-         <section>
+      <MenuPatrimonio />
+
+      <PatrimonioHeader conteudo={objetoConteudo} A />
+      <Container>
+        <section>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-            <Card className={classes.card}>
-              <CardActionArea className="card-content">
-                <CardMedia
-                  className={classes.media}
-                  image={img_historia}
-                  title="Igreja de Santo Alexandre"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                   História
+              <Card className={classes.card}>
+                <CardActionArea className="card-content">
+                  <CardMedia
+                    className={classes.media}
+                    image={img_historia}
+                    title="Igreja de Santo Alexandre"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      História
                   </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" style={{color: `rgba(105, 28, 72, 0.6)`}}>
-                  <Link to="/patrimonio/igreja-de-santo-alexandre">
-                    Leia mais 
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" style={{ color: `rgba(105, 28, 72, 0.6)` }}>
+                    <Link to="/patrimonio/igreja-de-santo-alexandre">
+                      Leia mais
                   </Link>
-                </Button>
-              </CardActions>
-            </Card>
+                  </Button>
+                </CardActions>
+              </Card>
             </Grid>
             <Grid item xs={12} sm={6}>
-            <Card className={classes.card}>
-              <CardActionArea className="card-content">
-                <CardMedia
-                  className={classes.media}
-                  image={img_historia}
-                  title="Igreja de Santo Alexandre"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                   Curiosidades
+              <Card className={classes.card}>
+                <CardActionArea className="card-content">
+                  <CardMedia
+                    className={classes.media}
+                    image={img_historia}
+                    title="Igreja de Santo Alexandre"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Curiosidades
                   </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" style={{color: `rgba(105, 28, 72, 0.6)`}}>
-                  <Link to="/patrimonio/igreja-de-santo-alexandre">
-                    Learn More
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" style={{ color: `rgba(105, 28, 72, 0.6)` }}>
+                    <Link to="/patrimonio/igreja-de-santo-alexandre">
+                      Learn More
                   </Link>
-                </Button>
-              </CardActions>
-            </Card>
+                  </Button>
+                </CardActions>
+              </Card>
             </Grid>
             <Grid item xs={12} sm={6}>
-            <Card className={classes.card}>
-              <CardActionArea className="card-content">
-                <CardMedia
-                  className={classes.media}
-                  image={img_historia}
-                  title="Igreja de Santo Alexandre"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Galeria
+              <Card className={classes.card}>
+                <CardActionArea className="card-content">
+                  <CardMedia
+                    className={classes.media}
+                    image={img_historia}
+                    title="Igreja de Santo Alexandre"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Galeria
                   </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" style={{color: `rgba(105, 28, 72, 0.6)`}}>
-                  <Link to="/patrimonio/igreja-de-santo-alexandre">
-                    Learn More
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" style={{ color: `rgba(105, 28, 72, 0.6)` }}>
+                    <Link to="/patrimonio/igreja-de-santo-alexandre">
+                      Learn More
                   </Link>
-                </Button>
-              </CardActions>
-            </Card>
+                  </Button>
+                </CardActions>
+              </Card>
             </Grid>
             <Grid item xs={12} sm={6}>
-            <Card className={classes.card}>
-              <CardActionArea className="card-content">
-                <CardMedia
-                  className={classes.media}
-                  image={img_historia}
-                  title="Igreja de Santo Alexandre"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                   Eventos
+              <Card className={classes.card}>
+                <CardActionArea className="card-content">
+                  <CardMedia
+                    className={classes.media}
+                    image={img_historia}
+                    title="Igreja de Santo Alexandre"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Eventos
                   </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" style={{color: `rgba(105, 28, 72, 0.6)`}}>
-                  <Link to="/patrimonio/igreja-de-santo-alexandre">
-                    Learn More
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" style={{ color: `rgba(105, 28, 72, 0.6)` }}>
+                    <Link to="/patrimonio/igreja-de-santo-alexandre">
+                      Learn More
                   </Link>
-                </Button>
-              </CardActions>
-            </Card>
+                  </Button>
+                </CardActions>
+              </Card>
             </Grid>
           </Grid>
-         </section>
-       </Container>
-       {/* <PatrimonioHistoria conteudo={objetoConteudo} />
+        </section>
+      </Container>
+      {/* <PatrimonioHistoria conteudo={objetoConteudo} />
        <PatrimonioCuriosidade conteudo={objetoConteudo} />
        <PatrimonioCaracteristica conteudo={objetoConteudo} /> */}
     </Fragment>
