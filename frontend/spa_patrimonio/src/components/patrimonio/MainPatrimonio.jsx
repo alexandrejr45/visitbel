@@ -1,7 +1,9 @@
-import React, {Component, Fragment} from 'react'
+import React, { Component, Fragment } from 'react';
+import { Switch, useRouteMatch, Route } from 'react-router-dom';
 import MenuPatrimonio from './MenuPatrimonio';
-import PatrimonioHeader from './HeaderPatrimonio';
-import DashboardPatrimonio from "../patrimonio/DashboardPatrimonio";
+import HeaderPatrimonio from './HeaderPatrimonio';
+import CuriosidadePatrimonio from './CuriosidadePatrimonio'
+import DashboardPatrimonio from '../patrimonio/DashboardPatrimonio';
 import img_background_section from '../../img/igreja_se/backgrund-se.png';
 import img_background_section_1 from '../../img/igreja_se/background-se03.png';
 import img_texto from '../../img/igreja_se/img-se-2.jpg';
@@ -9,44 +11,48 @@ import img_texto_1 from '../../img/igreja_se/img-se-3.jpg';
 import img_texto_2 from '../../img/igreja_se/img-se-5.jpg';
 import texto from '../../texts/igreja_da_se.json';
 import img_igreja_se from '../../img/igreja_se.jpg';
-import img_default from '../../img/igreja_se/c.se.jpg'
+import img_default from '../../img/igreja_se/c.se.jpg';
 
 export default class MainPatrimonio extends Component {
-    constructor(props){
-        super(props);
-        this.state = {tipo: props.patrimonio, pagina: 'dashboard', conteudo:{
-            id: [0, 1],
-            titulo: texto.titulo,
-            subtitulo: `"${texto.subtitulo}"`,
-            historia: texto.historia,
-            caracteristica: texto.caracteristica,
-            curiosidade: texto.curiosidade,
-            anos: [1978, 2001],
-            imgBackgroundHeader: img_igreja_se,
-            imgBackgroundSection: img_background_section,
-            imgBackgroundSection1: img_background_section_1,
-            imgConteudo: [img_texto, img_texto_1, img_texto_2, img_default]
-        }};
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      tipo: props.patrimonio,
+      pagina: 'dashboard',
+      conteudo: {
+        id: [0, 1],
+        titulo: texto.titulo,
+        subtitulo: `"${texto.subtitulo}"`,
+        historia: texto.historia,
+        caracteristica: texto.caracteristica,
+        curiosidade: texto.curiosidade,
+        anos: [1978, 2001],
+        imgBackgroundHeader: img_igreja_se,
+        imgBackgroundSection: img_background_section,
+        imgBackgroundSection1: img_background_section_1,
+        imgConteudo: [img_texto, img_texto_1, img_texto_2, img_default],
+      },
+    };
+  }
 
-    async fetchContent(){
+  async fetchContent() {}
 
-    }
+  componentDidMount() {}
 
-    componentDidMount(){
+  componentDidUpdate() {}
 
-    }
-
-    componentWillMount(){
-
-    }
-
-    render(){
-        return(
-            <Fragment>
-                <MenuPatrimonio />
-                <PatrimonioHeader conteudo={this.state.conteudo} />
-            </Fragment>
-        )
-    }
+  render() {
+    let { url } = useRouteMatch();
+    return (
+      <Fragment>
+        <MenuPatrimonio />
+        <HeaderPatrimonio conteudo={this.state.conteudo} />
+        <Switch>
+          <Route path={`${url}/:option`}>
+              <CuriosidadePatrimonio conteudo={this.state.conteudo} />
+          </Route>
+        </Switch>
+      </Fragment>
+    );
+  }
 }

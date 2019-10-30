@@ -1,7 +1,7 @@
 import "../../css/pagina_patrimonio.css";
 import React, { Fragment } from "react";
 
-function PatrimonioHistoria(props) {
+export default function HistoriaPatrimonio(props) {
   return (
     <Fragment>
       <section className="historia">
@@ -44,5 +44,3 @@ function PatrimonioHistoria(props) {
     </Fragment>
   );
 }
-
-export default PatrimonioHistoria;
