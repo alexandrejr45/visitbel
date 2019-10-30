@@ -40,7 +40,7 @@ function PatrimonioHistoria(props) {
           })}
         </div>
       </section>
-      <div style={{marginTop: 3 + "em"}} />
+      <div style={{ marginTop: 3 + "em" }} />
     </Fragment>
   );
 }

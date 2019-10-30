@@ -77,9 +77,8 @@ const Home = () => {
           <div style={{ marginTop: 3 + 'em' }} />
 
           <div className="row spacing_align">
-            <div className="col-12 offset-lg-6">
+            <div className="col-  6 offset-lg-6">
               <h5>Sobre o Visitbell</h5>
-
             </div>
             <div className="col-6 offset-lg-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
@@ -99,7 +98,7 @@ const Home = () => {
           </div>
 
           <div className="row spacing_align">
-            <div className="col-12 offset-lg-6">
+            <div className="col-6 offset-lg-6">
               <h5>Colaboradores</h5>
 
             </div>

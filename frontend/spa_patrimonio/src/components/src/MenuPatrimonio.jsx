@@ -98,7 +98,7 @@ export default function MiniDrawer() {
       <CssBaseline />
       <AppBar
         position="fixed"
-        className={Array.prototype.concat(classes.appBar, {
+        className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
@@ -108,7 +108,7 @@ export default function MiniDrawer() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            className={Array.prototype.concat(classes.menuButton, {
+            className={clsx(classes.menuButton, {
               [classes.hide]: open,
             })}
           >
@@ -118,10 +118,7 @@ export default function MiniDrawer() {
       </AppBar>
       <Drawer
         variant="permanent"
-        className={Array.prototype.concat(classes.drawer, {
-          [classes.drawerOpen]: open,
-          [classes.drawerClose]: !open,
-        })}
+   
         classes={{
           paper: clsx({
             [classes.drawerOpen]: open,
