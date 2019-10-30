@@ -8,12 +8,13 @@ export default function Patrimonio(props) {
     'casa-das-onze-janelas',
   ];
   let patrimonio_atual = null;
-  console.log(props);
-
+  
   if (patrimonios_validos.includes(props.match.params.id)) {
     patrimonio_atual = props.match.params.id;
+  }else{
+    patrimonio_atual = 'error'
   }
-
+  
   return (
     <MainPatrimonio patrimonio={patrimonio_atual} />
   );

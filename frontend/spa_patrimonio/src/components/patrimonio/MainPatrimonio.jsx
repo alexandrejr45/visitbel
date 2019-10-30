@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { Switch, useRouteMatch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
 import MenuPatrimonio from './MenuPatrimonio';
 import HeaderPatrimonio from './HeaderPatrimonio';
-import CuriosidadePatrimonio from './CuriosidadePatrimonio'
+import CuriosidadePatrimonio from './CuriosidadePatrimonio';
+import HistoriaPatrimonio from './HistoriaPatrimonio';
 import DashboardPatrimonio from '../patrimonio/DashboardPatrimonio';
 import img_background_section from '../../img/igreja_se/backgrund-se.png';
 import img_background_section_1 from '../../img/igreja_se/background-se03.png';
@@ -18,7 +19,6 @@ export default class MainPatrimonio extends Component {
     super(props);
     this.state = {
       tipo: props.patrimonio,
-      pagina: 'dashboard',
       conteudo: {
         id: [0, 1],
         titulo: texto.titulo,
@@ -42,16 +42,21 @@ export default class MainPatrimonio extends Component {
   componentDidUpdate() {}
 
   render() {
-    let { url } = useRouteMatch();
     return (
       <Fragment>
         <MenuPatrimonio />
         <HeaderPatrimonio conteudo={this.state.conteudo} />
-        <Switch>
-          <Route path={`${url}/:option`}>
+        <BrowserRouter basename="/patrimonio">
+          <Switch>
+            <Route exact path={`/${this.state.tipo}/curiosidade`}>
               <CuriosidadePatrimonio conteudo={this.state.conteudo} />
-          </Route>
-        </Switch>
+            </Route>
+            <Route exact path={`/${this.state.tipo}/historia`}>
+              <HistoriaPatrimonio conteudo={this.state.conteudo} />
+            </Route>
+            <Redirect from={`${!this.state.patrimonio}`} to="/patrimonio" />
+          </Switch>
+        </BrowserRouter>
       </Fragment>
     );
   }

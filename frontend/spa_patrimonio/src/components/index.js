@@ -9,11 +9,10 @@ export default function Main() {
     <Fragment>
       <main>
         <Switch>
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/patrimonio" component={HomePatrimonio} />
-          <Route path="patrimonio/:id" component={Patrimonio}>
-          </Route>
-          <Redirect from="*" to="/home" />
+          <Route path="/patrimonio/:id" component={Patrimonio} />
+          <Redirect from="*" to="/" />
         </Switch>
       </main>
     </Fragment>
