@@ -45,6 +45,10 @@
   display: none;
 }
 
+.spacing_align{
+  margin-bottom: 3em;
+}
+
 @media (max-width: 720px) {
   .header-itens {
     display: none;

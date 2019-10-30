@@ -24,6 +24,7 @@ const Home = () => {
                   transform: `translate(${styleCenter})`,
                 }}
               >
+
                 O que você deseja fazer?
               </h2>
             </div>
@@ -66,7 +67,48 @@ const Home = () => {
       <div style={{ marginTop: 10 + 'em' }} />
       <section>
         <div className="container">
-         </div>
+          <div className="row">
+            <div className="col-12">
+              <h4 style={{ textAlign: 'center' }}>
+                Sobre Nós
+              </h4>
+            </div>
+          </div>
+          <div style={{ marginTop: 3 + 'em' }} />
+
+          <div className="row spacing_align">
+            <div className="col-12 offset-lg-6">
+              <h5>Sobre o Visitbell</h5>
+
+            </div>
+            <div className="col-6 offset-lg-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
+               Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
+              </div>
+          </div>
+
+          <div className="row spacing_align">
+            <div className="col-12">
+              <h5>Projeto de extensão</h5>
+
+            </div>
+            <div className="col-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
+               Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
+              </div>
+          </div>
+
+          <div className="row spacing_align">
+            <div className="col-12 offset-lg-6">
+              <h5>Colaboradores</h5>
+
+            </div>
+            <div className="col-6 offset-lg-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
+               Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
+              </div>
+          </div>
+        </div>
       </section>
     </Fragment>
   );
