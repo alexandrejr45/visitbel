@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   margin: "5em"
 });
 
-const PagePatrimonio = () => {
+export default function HomePatrimonio() {
   const classes = useStyles();
 
   return (
@@ -130,5 +130,3 @@ const PagePatrimonio = () => {
     </Container>
   );
 };
-
-export default PagePatrimonio;

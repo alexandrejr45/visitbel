@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 const Main = React.lazy(() => import('./components/index'));
-const Header = React.lazy(() => import('./components/src/Header'));
+const Header = React.lazy(() => import('./components/home/Header'));
 
 library.add(fas);
 
