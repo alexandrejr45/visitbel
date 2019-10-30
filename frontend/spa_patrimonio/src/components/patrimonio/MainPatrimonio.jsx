@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import MenuPatrimonio from './MenuPatrimonio';
-import PatrimonioHeader from './PatrimonioHeader';
+import PatrimonioHeader from './HeaderPatrimonio';
 import DashboardPatrimonio from "../patrimonio/DashboardPatrimonio";
 import img_background_section from '../../img/igreja_se/backgrund-se.png';
 import img_background_section_1 from '../../img/igreja_se/background-se03.png';
