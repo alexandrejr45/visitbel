@@ -1,6 +1,6 @@
-import * as firebase from "firebase/app";
+import * as firebase from 'firebase/app';
 import firebaseConfig from './auth';
-import "firebase/firestore";
+import 'firebase/firestore';
 
 function checkSetup() {
   if (
@@ -9,37 +9,39 @@ function checkSetup() {
     !firebase.app().options
   ) {
     console.log(
-      "You have not configured and imported the Firebase SDK. " +
-        "Make sure you go through the codelab setup instructions and make " +
-        "sure you are running the codelab using `firebase serve`"
+      'You have not configured and imported the Firebase SDK. ' +
+        'Make sure you go through the codelab setup instructions and make ' +
+        'sure you are running the codelab using `firebase serve`'
     );
   }
 }
 
-// // function initFirebaseAuth() {
-// //   // Listen to auth state changes.
-// //   firebase.auth().onAuthStateChanged(authStateObserver);
-// // }
-
-// export function saveMessage(messageText) {
-//   // Add a new message entry to the Firebase database.
-//   return firebase
-//     .firestore()
-//     .collection("patrimonio")
-//     .doc("igreja-da-se")
-//     .add({
-//       name: "Alexandre",
-//       text: messageText,
-//       timestamp: firebase.firestore.FieldValue.serverTimestamp()
-//     })
-//     .catch(function(error) {
-//       console.error("Error writing new message to Firebase Database", error);
-//     });
-// }
+export function enableCache() {
+  firebase
+    .firestore()
+    .enablePersistence()
+    .catch(function(err) {
+      if (err.code === 'failed-precondition') {
+        console.log(
+          'Multíplas abas abertas, não foi possível realizar o cache dos arquivos'
+        );
+      } else if (err.code === 'unimplemented') {
+        console.log('O browser atual não suporta o cache offline do firestore');
+      }else{
+        console.log('Ocorreu um erro na realização cache dos arquivos do firestore');
+      }
+    });
+}
 
 export function initFirebase() {
-  checkSetup();
-
-  firebase.initializeApp(firebaseConfig);
-  return firebase;
+  try{
+    firebase.initializeApp(firebaseConfig)
+    checkSetup();
+    return firebase;
+  }catch(error){
+    console.log('Não foi possível se conectar com firebase');
+    console.log(error);
+    return;
+  }
+  
 }

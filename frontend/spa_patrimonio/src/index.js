@@ -19,4 +19,8 @@ ReactDOM.render(
 );
 
 firebase.initFirebase();
+firebase.enableCache();
 serviceWorker.register();
+
+
+
