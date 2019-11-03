@@ -20,7 +20,10 @@ const useStyles = makeStyles({
   margin: "5em"
 });
 export default function CuriosidadePatrimonio(props) {
-  const classes = useStyles();
+  const styles = null;
+
+  console.log(props.conteudo);
+
   return (
 
     <Fragment>

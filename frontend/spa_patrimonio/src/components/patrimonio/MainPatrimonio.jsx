@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
+import * as firebase from 'firebase/app';
+import firestore from 'firebase/firestore';
+import MenuPatrimonio from './MenuPatrimonio';
 import HeaderPatrimonio from './HeaderPatrimonio';
 import CuriosidadePatrimonio from './CuriosidadePatrimonio';
 import HistoriaPatrimonio from './HistoriaPatrimonio';
@@ -14,37 +17,45 @@ import img_igreja_se from '../../img/igreja_se.jpg';
 import img_default from '../../img/igreja_se/c.se.jpg';
 
 export default class MainPatrimonio extends Component {
+  
   constructor(props) {
     super(props);
+    this.ref = firebase.firestore().collection('patrimonio');
     this.state = {
-      tipo: props.patrimonio,
-      conteudo: {
-        id: [0, 1],
-        titulo: texto.titulo,
-        subtitulo: `"${texto.subtitulo}"`,
-        historia: texto.historia,
-        caracteristica: texto.caracteristica,
-        curiosidade: texto.curiosidade,
-        anos: [1978, 2001],
-        imgBackgroundHeader: img_igreja_se,
-        imgBackgroundSection: img_background_section,
-        imgBackgroundSection1: img_background_section_1,
-        imgConteudo: [img_texto, img_texto_1, img_texto_2, img_default],
-      },
+      conteudo: {},
     };
   }
 
-  async fetchContent() { }
+  fetchContent(patrimonio) {
+    this.ref
+      .doc(patrimonio)
+      .get()
+      .then((doc) => {
+        if(doc.exists){
+          return doc.data();
+        }
+      })
+      .catch(function(error) {
+        console.log('Error getting document:', error);
+      });
+  }
 
-  componentDidMount() { }
+  componentDidMount() {
+    
+  }
 
-  componentDidUpdate() { }
+  componentDidUpdate(prevProps) {
+    if(this.props.patrimonio != prevProps.patrimonio){
+      const conteudo = this.fetchContent(this.props.patrimonio);
+      this.setState({conteudo: conteudo})
+    }
+  }
 
   render() {
     return (
       <Fragment>
-
-        <HeaderPatrimonio conteudo={this.state.conteudo} />
+        <MenuPatrimonio />
+        {/* <HeaderPatrimonio conteudo={this.state.conteudo} /> */}
         <BrowserRouter basename="/patrimonio">
           <Switch>
             <Route exact path={`/${this.state.tipo}/curiosidade`}>
