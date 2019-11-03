@@ -17,22 +17,47 @@ import img_igreja_se from '../../img/igreja_se.jpg';
 import img_default from '../../img/igreja_se/c.se.jpg';
 
 export default class MainPatrimonio extends Component {
-  
   constructor(props) {
     super(props);
     this.ref = firebase.firestore().collection('patrimonio');
+    this.id = null;
     this.state = {
       conteudo: {},
     };
   }
 
-  fetchContent(patrimonio) {
+  static getDerivedStateFromProps(props, state) {
+    if (props.id !== state.prevId) {
+      return {
+        conteudo: null,
+        prevId: props.id,
+      };
+    }
+
+    return null;
+  }
+
+  componentDidMount() {
+    this._fetchContent(this.props.id);
+  }
+
+  componentDidUpdate() {
+    if (this.state.conteudo === null) {
+      this._fetchContent(this.props.id);
+    }
+  }
+
+  _fetchContent(id) {
+    if (id === this.id) return;
+
+    this.id = id;
+
     this.ref
-      .doc(patrimonio)
+      .doc(id)
       .get()
       .then((doc) => {
-        if(doc.exists){
-          return doc.data();
+        if (doc.exists) {
+          this.setState({ conteudo: doc.data() });
         }
       })
       .catch(function(error) {
@@ -40,34 +65,30 @@ export default class MainPatrimonio extends Component {
       });
   }
 
-  componentDidMount() {
-    
-  }
-
-  componentDidUpdate(prevProps) {
-    if(this.props.patrimonio != prevProps.patrimonio){
-      const conteudo = this.fetchContent(this.props.patrimonio);
-      this.setState({conteudo: conteudo})
-    }
-  }
-
   render() {
-    return (
-      <Fragment>
-        <MenuPatrimonio />
-        {/* <HeaderPatrimonio conteudo={this.state.conteudo} /> */}
-        <BrowserRouter basename="/patrimonio">
-          <Switch>
-            <Route exact path={`/${this.state.tipo}/curiosidade`}>
-              <CuriosidadePatrimonio conteudo={this.state.conteudo} />
-            </Route>
-            <Route exact path={`/${this.state.tipo}/historia`}>
-              <HistoriaPatrimonio conteudo={this.state.conteudo} />
-            </Route>
-            <Redirect from={`${!this.state.patrimonio}`} to="/patrimonio" />
-          </Switch>
-        </BrowserRouter>
-      </Fragment>
-    );
+    if (this.state.conteudo === null) {
+      return <div>Carregando</div>;
+    } else {
+      console.log(this.id)
+      console.log(this.state.conteudo)
+
+      return (
+        <Fragment>
+          <MenuPatrimonio />
+          {/* <HeaderPatrimonio conteudo={this.state.conteudo} /> */}
+          <BrowserRouter basename="/patrimonio">
+            <Switch>
+              <Route exact path={`/${this.state.id}/curiosidade`}>
+                <CuriosidadePatrimonio conteudo={this.state.conteudo} />
+              </Route>
+              <Route exact path={`/${this.state.id}/historia`}>
+                <HistoriaPatrimonio conteudo={this.state.conteudo} />
+              </Route>
+              <Redirect from={`${!this.state.patrimonio}`} to="/patrimonio" />
+            </Switch>
+          </BrowserRouter>
+        </Fragment>
+      );
+    }
   }
 }
