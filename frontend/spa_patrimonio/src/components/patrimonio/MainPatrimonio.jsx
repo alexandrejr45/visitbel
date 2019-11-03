@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
-import MenuPatrimonio from './MenuPatrimonio';
 import HeaderPatrimonio from './HeaderPatrimonio';
 import CuriosidadePatrimonio from './CuriosidadePatrimonio';
 import HistoriaPatrimonio from './HistoriaPatrimonio';
@@ -35,16 +34,16 @@ export default class MainPatrimonio extends Component {
     };
   }
 
-  async fetchContent() {}
+  async fetchContent() { }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  componentDidUpdate() {}
+  componentDidUpdate() { }
 
   render() {
     return (
       <Fragment>
-        <MenuPatrimonio />
+
         <HeaderPatrimonio conteudo={this.state.conteudo} />
         <BrowserRouter basename="/patrimonio">
           <Switch>

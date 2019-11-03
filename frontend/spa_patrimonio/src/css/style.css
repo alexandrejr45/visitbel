@@ -8,6 +8,10 @@
   src: url("../../src/fonts/Montserrat-SemiBold.ttf");
 }
 
+body, p{
+  
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 960px;

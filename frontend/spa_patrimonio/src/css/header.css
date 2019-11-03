@@ -8,12 +8,19 @@
   src: url("../../src/fonts/Montserrat-SemiBold.ttf");
 }
 
+p{
+  font-family: "montserrat-light" !important;
+}
+
 #cabecalho {
   background: linear-gradient(
       225deg,
       rgba(105, 28, 72, 0.5),
       rgba(105, 28, 72, 0.7)
     );
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 .hover-line:hover {
@@ -49,7 +56,7 @@
   margin-bottom: 3em;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 991px) {
   .header-itens {
     display: none;
   }

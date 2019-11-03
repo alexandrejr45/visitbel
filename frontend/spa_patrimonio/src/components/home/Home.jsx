@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import googleMapsImg from '../../img/Google-Maps.png';
-import igreja_santo_alexandre_icon from '../../img/flat1.png';
-import igreja_se_icon from '../../img/flat2.png';
-import casa_das_onze_janelas from '../../img/flat3.png';
+// import igreja_santo_alexandre_icon from '../../img/flat1.png';
+// import igreja_se_icon from '../../img/flat2.png';
+// import casa_das_onze_janelas from '../../img/flat3.png';
 const Home = () => {
   const styleCenter = [-50 + '%', -50 + '%'];
 
@@ -81,9 +81,12 @@ const Home = () => {
               <h5>Sobre o Visitbell</h5>
             </div>
             <div className="col-6 offset-lg-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
                Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
-              </div>
+            
+            </p>
+               </div>
           </div>
 
           <div className="row spacing_align">
@@ -92,9 +95,11 @@ const Home = () => {
 
             </div>
             <div className="col-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
-               Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
-              </div>
+              <p>
+                O projeto VisitBel, ten por iniciativa iniciar a carreira de historiadores
+                de todo o nundo a ser quen você é de verdade!
+              </p>
+            </div>
           </div>
 
           <div className="row spacing_align">
@@ -103,9 +108,12 @@ const Home = () => {
 
             </div>
             <div className="col-6 offset-lg-6">
+              <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
-               Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
-              </div>
+                Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
+              
+              </p>
+            </div>
           </div>
         </div>
       </section>

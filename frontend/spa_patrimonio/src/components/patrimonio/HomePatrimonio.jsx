@@ -1,15 +1,10 @@
 import "../../css/page_patrimonio.css";
 import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
+import {
+  Grid, Container, Card, CardActionArea, CardActions, CardContent, CardMedia, Button,
+  Typography, Box
+} from "@material-ui/core"
 import { Link } from "react-router-dom";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import igreja_santo_alexandre_icon from "../../img/flat1.png";
 import igreja_se_icon from "../../img/flat2.png";
@@ -25,7 +20,10 @@ const useStyles = makeStyles({
   root: {
     flexGrow: 1
   },
-  margin: "5em"
+  font: {
+    fontFamily: "montserrat-semibold"
+  },
+
 });
 
 export default function HomePatrimonio() {
@@ -34,26 +32,35 @@ export default function HomePatrimonio() {
   return (
     <Container maxWidth="md">
 
-      <div style={useStyles.margin} />
+      <div style={{ paddingTop: 5 + "em" }} />
+
       <section id="patrimonio-content" style={useStyles.root}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12}>
+            <Box component="div">
+              <Typography component="h3" className={useStyles.font} >
+                Navegue Pelos Nossos Patrimônios
+              </Typography>
+            </Box>
+            <Typography component="p">
+              Tenha Experiências Incríveis
+            </Typography>
+          </Grid>
+          <Grid item xs={6}>
             <Card className={classes.card}>
               <CardActionArea className="card-content">
                 <CardMedia
                   className={classes.media}
                   image={igreja_se_icon}
-                  title="Igreja da Sé"
-                />
+                  title="Igreja da Sé" />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom  component="h4">
                     Igreja da Sé
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
-                    component="p"
-                  >
+                    component="p">
                     Igreja da Sé
                   </Typography>
                 </CardContent>
@@ -65,7 +72,7 @@ export default function HomePatrimonio() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={6}>
             <Card className={classes.card}>
               <CardActionArea className="card-content">
                 <CardMedia
@@ -74,15 +81,15 @@ export default function HomePatrimonio() {
                   title="Igreja de Santo Alexandre"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Igreja de Santo Alexandre
+                  <Typography gutterBottom component="h4">
+                    Forte do Castelo
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
                   >
-                    Igreja de Santo Alexandre
+                    Forte do Castelo
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -95,7 +102,7 @@ export default function HomePatrimonio() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12}>
             <Card className={classes.card}>
               <CardActionArea className="card-content">
                 <CardMedia
