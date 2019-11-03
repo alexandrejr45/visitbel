@@ -12,12 +12,8 @@
     rgba(105, 28, 72, 0.5),
     rgba(105, 28, 72, 0.7)
   );
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  width: auto;
-  max-height: auto;
-  height: 500px;
+  background-position: center center !important;
+  height: 600px;
 }
 
 .line-border {

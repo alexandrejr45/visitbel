@@ -7,17 +7,15 @@ export default function HeaderPatrimonio(props) {
   return (
     <Fragment>
       <div
-        className="background-conteudo"
+        className="background-conteudo img-fluid"
         style={{
           background: `linear-gradient(225deg, rgba(105, 28, 72, 0.5), rgba(105, 28, 72, 0.7)), url("${tipo_patrimonio.imgBackgroundHeader}")`,
           backgroundSize: 'cover',
-          backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
-          width: 'auto',
-          maxHeight: 'auto',
-          height: 500 + 'px',
         }}
       >
+        <div style={{ paddingTop: 8 + "em" }} />
+
         <div className="container">
           <div className="row">
             <div className="col-md-5" style={{ marginTop: 5 + 'em' }}>
