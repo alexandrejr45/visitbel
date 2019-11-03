@@ -1,20 +1,20 @@
-// import * as firebase from "firebase/app";
-// import firebaseConfig from './auth';
-// import "firebase/firestore";
+import * as firebase from "firebase/app";
+import firebaseConfig from './auth';
+import "firebase/firestore";
 
-// function checkSetup() {
-//   if (
-//     !window.firebase ||
-//     !(firebase.app instanceof Function) ||
-//     !firebase.app().options
-//   ) {
-//     console.log(
-//       "You have not configured and imported the Firebase SDK. " +
-//         "Make sure you go through the codelab setup instructions and make " +
-//         "sure you are running the codelab using `firebase serve`"
-//     );
-//   }
-// }
+function checkSetup() {
+  if (
+    !window.firebase ||
+    !(firebase.app instanceof Function) ||
+    !firebase.app().options
+  ) {
+    console.log(
+      "You have not configured and imported the Firebase SDK. " +
+        "Make sure you go through the codelab setup instructions and make " +
+        "sure you are running the codelab using `firebase serve`"
+    );
+  }
+}
 
 // // function initFirebaseAuth() {
 // //   // Listen to auth state changes.
@@ -37,9 +37,9 @@
 //     });
 // }
 
-// export function initFirebase() {
-//   checkSetup();
+export function initFirebase() {
+  checkSetup();
 
-//   firebase.initializeApp(firebaseConfig);
-//   return firebase;
-// }
+  firebase.initializeApp(firebaseConfig);
+  return firebase;
+}

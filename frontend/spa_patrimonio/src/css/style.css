@@ -8,8 +8,8 @@
   src: url("../../src/fonts/Montserrat-SemiBold.ttf");
 }
 
-body, p{
-  
+body {
+  font-family: montserrat-semibold !important;
 }
 
 @media (min-width: 1200px) {

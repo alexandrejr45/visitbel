@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
+import * as firebase from 'firebase/app';
+import firestore from 'firebase/firestore';
+import MenuPatrimonio from './MenuPatrimonio';
 import HeaderPatrimonio from './HeaderPatrimonio';
 import CuriosidadePatrimonio from './CuriosidadePatrimonio';
 import HistoriaPatrimonio from './HistoriaPatrimonio';
@@ -16,47 +19,76 @@ import img_default from '../../img/igreja_se/c.se.jpg';
 export default class MainPatrimonio extends Component {
   constructor(props) {
     super(props);
+    this.ref = firebase.firestore().collection('patrimonio');
+    this.id = null;
     this.state = {
-      tipo: props.patrimonio,
-      conteudo: {
-        id: [0, 1],
-        titulo: texto.titulo,
-        subtitulo: `"${texto.subtitulo}"`,
-        historia: texto.historia,
-        caracteristica: texto.caracteristica,
-        curiosidade: texto.curiosidade,
-        anos: [1978, 2001],
-        imgBackgroundHeader: img_igreja_se,
-        imgBackgroundSection: img_background_section,
-        imgBackgroundSection1: img_background_section_1,
-        imgConteudo: [img_texto, img_texto_1, img_texto_2, img_default],
-      },
+      conteudo: {},
     };
   }
 
-  async fetchContent() { }
+  static getDerivedStateFromProps(props, state) {
+    if (props.id !== state.prevId) {
+      return {
+        conteudo: null,
+        prevId: props.id,
+      };
+    }
 
-  componentDidMount() { }
+    return null;
+  }
 
-  componentDidUpdate() { }
+  componentDidMount() {
+    this._fetchContent(this.props.id);
+  }
+
+  componentDidUpdate() {
+    if (this.state.conteudo === null) {
+      this._fetchContent(this.props.id);
+    }
+  }
+
+  _fetchContent(id) {
+    if (id === this.id) return;
+
+    this.id = id;
+
+    this.ref
+      .doc(id)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          this.setState({ conteudo: doc.data() });
+        }
+      })
+      .catch(function(error) {
+        console.log('Error getting document:', error);
+      });
+  }
 
   render() {
-    return (
-      <Fragment>
+    if (this.state.conteudo === null) {
+      return <div>Carregando</div>;
+    } else {
+      console.log(this.id)
+      console.log(this.state.conteudo)
 
-        <HeaderPatrimonio conteudo={this.state.conteudo} />
-        <BrowserRouter basename="/patrimonio">
-          <Switch>
-            <Route exact path={`/${this.state.tipo}/curiosidade`}>
-              <CuriosidadePatrimonio conteudo={this.state.conteudo} />
-            </Route>
-            <Route exact path={`/${this.state.tipo}/historia`}>
-              <HistoriaPatrimonio conteudo={this.state.conteudo} />
-            </Route>
-            <Redirect from={`${!this.state.patrimonio}`} to="/patrimonio" />
-          </Switch>
-        </BrowserRouter>
-      </Fragment>
-    );
+      return (
+        <Fragment>
+          <MenuPatrimonio />
+          {/* <HeaderPatrimonio conteudo={this.state.conteudo} /> */}
+          <BrowserRouter basename="/patrimonio">
+            <Switch>
+              <Route exact path={`/${this.state.id}/curiosidade`}>
+                <CuriosidadePatrimonio conteudo={this.state.conteudo} />
+              </Route>
+              <Route exact path={`/${this.state.id}/historia`}>
+                <HistoriaPatrimonio conteudo={this.state.conteudo} />
+              </Route>
+              <Redirect from={`${!this.state.patrimonio}`} to="/patrimonio" />
+            </Switch>
+          </BrowserRouter>
+        </Fragment>
+      );
+    }
   }
 }
