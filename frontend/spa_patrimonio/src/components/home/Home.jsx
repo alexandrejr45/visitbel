@@ -1,13 +1,49 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import googleMapsImg from '../../img/Google-Maps.png';
+import IconButton from '@material-ui/core/IconButton';
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+
+
 // import igreja_santo_alexandre_icon from '../../img/flat1.png';
 // import igreja_se_icon from '../../img/flat2.png';
 // import casa_das_onze_janelas from '../../img/flat3.png';
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  margin: {
+    margin: theme.spacing(1),
+  },
+  textField: {
+    flexBasis: 200,
+  },
+  inputColor:{
+    color: "white"
+  },
+}));
 const Home = () => {
+  const classes = useStyles();
   const styleCenter = [-50 + '%', -50 + '%'];
-
+  const [values, setValues] = React.useState({
+    nome: '', 
+    email: '',
+    bio:''  
+  });
+  const handleChange = prop => event => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
   return (
     <Fragment>
       <div className="ajuste-tela">
@@ -117,6 +153,65 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="background-home">
+        <div className="container">
+          <div className="col-12">
+            <h3 className="ajust-title-conteudo text-center text-color">Contato</h3>
+          </div>
+          <div className="col-12">
+            <h6 className="ajust-title-conteudo text-center text-color">Entre em contato conosco. Mande sua sugestão para melhorarmos
+            </h6>
+          </div>
+          <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+              <div className={classes.root}>
+                <FormControl fullWidth className={classes.margin} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-amount">Nome</InputLabel>
+                    <OutlinedInput
+                      id="outlined-adornment-amount"
+                      value={values.nome}
+                      onChange={handleChange('nome')}
+                      labelWidth={60}
+                    />
+                  </FormControl>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+              <div className={classes.root}>
+                <FormControl fullWidth className={classes.margin} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-amount">Email</InputLabel>
+                    <OutlinedInput
+                      id="outlined-adornment-amount"
+                      value={values.email}
+                      onChange={handleChange('email')}
+                      labelWidth={60}
+                    />
+                  </FormControl>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+              <div className={classes.root}>
+                <FormControl fullWidth className={classes.margin} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-amount">Bio</InputLabel>
+                    <OutlinedInput
+                      multiline={true}
+                      className={classes.inputColor}
+                      id="outlined-adornment-amount"
+                      value={values.bio}
+                      onChange={handleChange('bio')}
+                      labelWidth={60}
+                      rows={6}
+                    />
+                  </FormControl>
+                </div>
+            </div>
+          </div>
+          </div>
+      </section>
     </Fragment>
   );
 };
@@ -133,3 +228,4 @@ function scrollArrow() {
 }
 
 export default Home;
+

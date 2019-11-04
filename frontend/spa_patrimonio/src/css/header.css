@@ -41,6 +41,17 @@ p{
   display: inline-flex;
 }
 
+.background-home{
+  background-color: rgba(105, 28, 72, 1);
+
+}
+input, label{
+  color:white !important;
+}
+.MuiOutlinedInput-root.Mui-focused
+.MuiOutlinedInput-notchedOutline{
+border-color: white !important;
+}
 
 .text-nav {
   color: white;
