@@ -12,13 +12,14 @@ export default function Patrimonio(props) {
 
   if (patrimonios_validos.includes(props.match.params.id)) {
     patrimonio_atual = props.match.params.id;
-    
+
     return <MainPatrimonio id={patrimonio_atual} />;
   } else {
-    return <Redirect
-      from={`/patrimonio/${props.match.params.id}`}
-      to="/patrimonio"
-    ></Redirect>;
+    return (
+      <Redirect
+        from={`/patrimonio/${props.match.params.id}`}
+        to="/patrimonio"
+      ></Redirect>
+    );
   }
-
 }

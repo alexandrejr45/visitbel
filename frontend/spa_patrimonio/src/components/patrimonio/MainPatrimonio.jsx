@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, Redirect, BrowserRouter, useLocation } from 'react-router-dom';
 import * as firebase from 'firebase/app';
 import firestore from 'firebase/firestore';
 import MenuPatrimonio from './MenuPatrimonio';
@@ -10,6 +10,7 @@ import HistoriaPatrimonio from './HistoriaPatrimonio';
 export default class MainPatrimonio extends Component {
   constructor(props) {
     super(props);
+    this.location = useLocation();
     this.ref = firebase.firestore().collection('patrimonio');
     this.id = null;
     this.state = {
@@ -40,6 +41,21 @@ export default class MainPatrimonio extends Component {
 
   componentWillUnmount() {
     this.id = null;
+  }
+
+  _validaPatrimonio(patrimonio) {
+
+    const patrimoniosValidos = [
+      'igreja-da-se',
+      'igreja-de-santo-alexandre',
+      'casa-das-onze-janelas',
+    ];
+
+    if(patrimoniosValidos.includes(patrimonio)){
+      return true;
+    }
+
+    return;
   }
 
   _fetchContent(id) {
@@ -77,7 +93,10 @@ export default class MainPatrimonio extends Component {
               <Route exact path={`/${this.state.id}/historia`}>
                 <HistoriaPatrimonio conteudo={this.state.conteudo} />
               </Route>
-              <Redirect from={`${!this.state.patrimonio}`} to="/patrimonio" />
+              {
+               !this._validaPatrimonio(this.state.id) ? 
+                <Redirect from={`/${this.state.id}/`} to="/patrimonio" />  : null
+              }
             </Switch>
           </BrowserRouter>
         </Fragment>

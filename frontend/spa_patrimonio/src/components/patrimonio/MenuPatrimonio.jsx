@@ -75,4 +75,3 @@ export default function SpeedDialTooltipOpen() {
     </div>
   );
 }
-API
