@@ -10,7 +10,6 @@ import HistoriaPatrimonio from './HistoriaPatrimonio';
 export default class MainPatrimonio extends Component {
   constructor(props) {
     super(props);
-    this.location = useLocation();
     this.ref = firebase.firestore().collection('patrimonio');
     this.id = null;
     this.state = {
@@ -82,21 +81,22 @@ export default class MainPatrimonio extends Component {
     } else {
       return (
         <Fragment>
-          <div style={{ paddingTop: 5 + "em" }} />
-          <MenuPatrimonio />
+          
+          {/* <MenuPatrimonio /> */}
+          {console.log(this.props.id)}
           <HeaderPatrimonio conteudo={this.state.conteudo} />
           <BrowserRouter basename="/patrimonio">
             <Switch>
-              <Route exact path={`/${this.state.id}/curiosidade`}>
+              <Route exact path={`/${this.props.id}/curiosidade`}>
                 <CuriosidadePatrimonio conteudo={this.state.conteudo} />
               </Route>
-              <Route exact path={`/${this.state.id}/historia`}>
+              <Route exact path={`/${this.props.id}/historia`}>
                 <HistoriaPatrimonio conteudo={this.state.conteudo} />
               </Route>
-              {
+              {/* {
                !this._validaPatrimonio(this.state.id) ? 
                 <Redirect from={`/${this.state.id}/`} to="/patrimonio" />  : null
-              }
+              } */}
             </Switch>
           </BrowserRouter>
         </Fragment>
