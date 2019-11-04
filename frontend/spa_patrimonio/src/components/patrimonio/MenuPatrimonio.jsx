@@ -53,6 +53,7 @@ export default function SpeedDialTooltipOpen() {
 
   return (
     <div className={classes.root}>
+<<<<<<< HEAD
       <Backdrop open={open} />
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"
@@ -61,6 +62,41 @@ export default function SpeedDialTooltipOpen() {
         icon={<SpeedDialIcon />}
         onClose={handleClose}
         onOpen={handleOpen}
+=======
+      <CssBaseline />
+      <AppBar
+        position="fixed"
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        })}
+      >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            className={clsx(classes.menuButton, {
+              [classes.hide]: open,
+            })}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        variant="permanent"
+        className={clsx(classes.drawer, {
+          [classes.drawerOpen]: open,
+          [classes.drawerClose]: !open,
+        })}
+        classes={{
+          paper: clsx({
+            [classes.drawerOpen]: open,
+            [classes.drawerClose]: !open,
+          }),
+        }}
+>>>>>>> 8968565fdf62544faa243dee91e0344cd8cb6603
         open={open}
       >
         {actions.map(action => (
