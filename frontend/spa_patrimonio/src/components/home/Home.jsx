@@ -60,7 +60,6 @@ const Home = () => {
                   transform: `translate(${styleCenter})`,
                 }}
               >
-
                 O que você deseja fazer?
               </h2>
             </div>
@@ -82,17 +81,19 @@ const Home = () => {
             >
               <h4>O Centro Histórico na Palma da Sua Mão</h4>
               <p
-                className="col-lg-10"
+                className="col-lg-12"
                 style={{ marginTop: 2 + 'em', fontWeight: 'normal' }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
                 mollis felis risus, non vehicula tellus aliquet et. Nam id
                 elementum purus. Vivamus ac lobortis massa, et fermentum nisl.
                 Vestibulum et ante a mi molestie feugiat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                mollis felis risus, non vehicula tellus aliquet et. Nam id
+                elementum purus. Vivamus ac lobortis massa, et fermentum nisl.
+                Vestibulum et ante a mi molestie feugiat.
               </p>
-              <div className="col-lg-5">
-                <button>Iniciar Imersão</button>
-              </div>
+            
             </div>
             <div className="col-lg-3 text-center" style={{ top: 7 + 'em' }}>
               <img src={googleMapsImg} width="250" height="450" alt="" />
