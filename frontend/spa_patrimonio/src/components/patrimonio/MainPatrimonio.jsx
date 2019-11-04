@@ -60,7 +60,7 @@ export default class MainPatrimonio extends Component {
           this.setState({ conteudo: doc.data() });
         }
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log('Error getting document:', error);
       });
   }
@@ -74,6 +74,7 @@ export default class MainPatrimonio extends Component {
 
       return (
         <Fragment>
+          <div style={{ paddingTop: 5 + "em" }} />
           <MenuPatrimonio />
           {/* <HeaderPatrimonio conteudo={this.state.conteudo} /> */}
           <BrowserRouter basename="/patrimonio">
