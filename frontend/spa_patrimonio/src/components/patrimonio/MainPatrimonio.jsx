@@ -82,7 +82,7 @@ export default class MainPatrimonio extends Component {
       return (
         <Fragment>
           
-          {/* <MenuPatrimonio /> */}
+           <MenuPatrimonio /> */
           {console.log(this.props.id)}
           <HeaderPatrimonio conteudo={this.state.conteudo} />
           <BrowserRouter basename="/patrimonio">

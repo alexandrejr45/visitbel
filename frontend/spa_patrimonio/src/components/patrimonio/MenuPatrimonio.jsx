@@ -25,11 +25,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const actions = [
-  { icon: <HomeIcon />, name: 'Home' },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
-  { icon: <FavoriteIcon />, name: 'Like' },
+  { icon: <HomeIcon />, name: 'Menu Patrimônio' },
+  { icon: <SaveIcon />, name: 'História' },
+  { icon: <PrintIcon />, name: 'Curiosidades' },
+  { icon: <ShareIcon />, name: 'Galeria' },
 ];
 
 export default function SpeedDialTooltipOpen() {
@@ -37,9 +36,6 @@ export default function SpeedDialTooltipOpen() {
   const [open, setOpen] = React.useState(false);
   const [hidden, setHidden] = React.useState(false);
 
-  const handleVisibility = () => {
-    setHidden(prevHidden => !prevHidden);
-  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -48,10 +44,8 @@ export default function SpeedDialTooltipOpen() {
   const handleClose = () => {
     setOpen(false);
   };
-
   return (
-    <div className={classes.root}>
-      <Button onClick={handleVisibility}>Toggle Speed Dial</Button>
+    <div className="fixed-bottom">
       <Backdrop open={open} />
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"

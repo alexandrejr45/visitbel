@@ -114,10 +114,10 @@ const Home = () => {
           <div style={{ marginTop: 3 + 'em' }} />
 
           <div className="row spacing_align">
-            <div className="col-  6 offset-lg-6">
+            <div className="col-lg-6 offset-lg-6">
               <h5>Sobre o Visitbell</h5>
             </div>
-            <div className="col-6 offset-lg-6">
+            <div className="col-lg-6 offset-lg-6">
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
                Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
@@ -127,28 +127,27 @@ const Home = () => {
           </div>
 
           <div className="row spacing_align">
-            <div className="col-12">
+            <div className="col-lg-12">
               <h5>Projeto de extensão</h5>
 
             </div>
-            <div className="col-6">
+            <div className="col-lg-6">
               <p>
-                O projeto VisitBel, ten por iniciativa iniciar a carreira de historiadores
-                de todo o nundo a ser quen você é de verdade!
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
+                Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.  
+               </p>
             </div>
           </div>
 
           <div className="row spacing_align">
-            <div className="col-6 offset-lg-6">
+            <div className="col-lg-6 offset-lg-6">
               <h5>Colaboradores</h5>
 
             </div>
-            <div className="col-6 offset-lg-6">
+            <div className="col-lg-6 offset-lg-6">
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh blandit, porttitor odio ac, aliquam risus. Proin sagittis vehicula tincidunt.
-                Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.
-              
+                Integer ac ante quis felis imperdiet scelerisque eu sit amet nulla.  
               </p>
             </div>
           </div>
