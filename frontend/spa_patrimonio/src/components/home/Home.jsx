@@ -60,7 +60,9 @@ const Home = () => {
                   transform: `translate(${styleCenter})`,
                 }}
               >
-                O que você deseja fazer?
+                Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit. Curabitur quis nibh blandit,
+               
               </h2>
             </div>
 
